@@ -1,0 +1,480 @@
+<!DOCTYPE html><html lang="en" style=""><head><meta charset="utf-8"><meta content="width=device-width, initial-scale=1.0" name="viewport"><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={theme:{extend:{"colors":{"surface-tint":"#4d44e3","on-primary-fixed":"#0f0069","surface-dim":"#dcd8e5","node-prompt":"#4F46E5","tertiary-fixed":"#ffdbcc","inverse-primary":"#c3c0ff","on-tertiary-container":"#ffd2be","on-tertiary-fixed-variant":"#7b2f00","node-output":"#E11D48","on-secondary-fixed":"#131b2e","tertiary":"#7e3000","sidebar-navy":"#0c1322","on-tertiary-fixed":"#351000","surface-variant":"#e4e1ee","inverse-on-surface":"#f3effc","canvas-grid":"#E2E8F0","on-primary-fixed-variant":"#3323cc","surface-container":"#f0ecf9","node-logic":"#F59E0B","on-surface":"#1b1b24","inverse-surface":"#302f39","node-input":"#10B981","secondary-fixed-dim":"#bec6e0","node-search":"#A855F7","on-secondary-container":"#5c647a","primary-container":"#4f46e5","surface-container-high":"#eae6f4","primary-fixed-dim":"#c3c0ff","tertiary-fixed-dim":"#ffb695","secondary-fixed":"#dae2fd","surface-bright":"#fcf8ff","error-container":"#ffdad6","on-secondary":"#ffffff","background":"#fcf8ff","primary-fixed":"#e2dfff","surface-container-low":"#f5f2ff","outline-variant":"#c7c4d8","on-primary":"#ffffff","surface":"#fcf8ff","on-secondary-fixed-variant":"#3f465c","on-surface-variant":"#464555","slate-background":"#F8FAFC","on-error-container":"#93000a","secondary-container":"#dae2fd","on-tertiary":"#ffffff","surface-container-lowest":"#ffffff","primary":"#3525cd","on-error":"#ffffff","on-background":"#1b1b24","outline":"#777587","tertiary-container":"#a44100","surface-container-highest":"#e4e1ee","secondary":"#565e74","on-primary-container":"#dad7ff","error":"#ba1a1a"},"borderRadius":{"DEFAULT":"0.25rem","lg":"0.5rem","xl":"0.75rem","full":"9999px"},"spacing":{"unit-md":"16px","node-gap":"32px","unit-sm":"8px","container-margin":"24px","sidebar-width":"240px","inspector-width":"360px","gutter":"16px","unit-lg":"24px","unit-xs":"4px"},"fontFamily":{"label-caps":["Inter"],"headline-md":["Inter"],"mono-code":["monospace"],"headline-xl":["Inter"],"body-sm":["Inter"],"body-lg":["Inter"],"headline-lg":["Inter"],"body-md":["Inter"]},"fontSize":{"label-caps":["11px",{"lineHeight":"16px","letterSpacing":"0.05em","fontWeight":"600"}],"headline-md":["18px",{"lineHeight":"28px","fontWeight":"600"}],"mono-code":["13px",{"lineHeight":"18px","fontWeight":"400"}],"headline-xl":["36px",{"lineHeight":"44px","letterSpacing":"-0.02em","fontWeight":"700"}],"body-sm":["12px",{"lineHeight":"16px","fontWeight":"400"}],"body-lg":["16px",{"lineHeight":"24px","fontWeight":"400"}],"headline-lg":["24px",{"lineHeight":"32px","letterSpacing":"-0.01em","fontWeight":"600"}],"body-md":["14px",{"lineHeight":"20px","fontWeight":"400"}]}}}}</script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&amp;display=swap" rel="stylesheet"></head><body class="bg-slate-background font-body-md text-on-surface"><aside class="fixed left-0 top-0 h-full w-sidebar-width bg-[#0c1322] z-50 flex flex-col shadow-xl"><div class="p-unit-lg flex items-center gap-3 border-b border-white/5"><div class="w-8 h-8 rounded-lg bg-primary/20 border border-primary/40 flex items-center justify-center text-primary-fixed"><span class="material-symbols-outlined text-[20px]">hub</span></div><div class="flex flex-col"><span class="text-white font-headline-md text-[16px] tracking-tight leading-none">PromptFlow</span><span class="text-[10px] font-semibold text-indigo-400 tracking-wider mt-0.5">RESEARCH</span></div></div><nav class="flex-1 py-unit-md px-unit-sm overflow-y-auto space-y-0.5" data-active-classes="bg-primary text-white"><a class="flex items-center px-unit-md py-2.5 rounded-lg text-white/60 hover:text-white hover:bg-white/5 transition-all group" data-path="inicio" href="#"><span class="material-symbols-outlined mr-3 text-[20px]">home</span><span class="text-body-md font-body-md">Inicio</span></a><a class="flex items-center px-unit-md py-2.5 rounded-lg text-white/60 hover:text-white hover:bg-white/5 transition-all" data-path="investigaciones" href="#"><span class="material-symbols-outlined mr-3 text-[20px]">science</span><span class="text-body-md font-body-md">Investigaciones</span></a><a class="flex items-center px-unit-md py-2.5 rounded-lg text-white/60 hover:text-white hover:bg-white/5 transition-all" data-path="workflows" href="#"><span class="material-symbols-outlined mr-3 text-[20px]">account_tree</span><span class="text-body-md font-body-md">Workflows</span></a><a class="flex items-center px-unit-md py-2.5 rounded-lg text-white/60 hover:text-white hover:bg-white/5 transition-all" data-path="prompts" href="#"><span class="material-symbols-outlined mr-3 text-[20px]">terminal</span><span class="text-body-md font-body-md">Prompts</span></a><a class="flex items-center px-unit-md py-2.5 rounded-lg text-white/60 hover:text-white hover:bg-white/5 transition-all" data-path="plantillas" href="#"><span class="material-symbols-outlined mr-3 text-[20px]">dashboard_customize</span><span class="text-body-md font-body-md">Plantillas</span></a><a class="flex items-center px-unit-md py-2.5 rounded-lg text-white/60 hover:text-white hover:bg-white/5 transition-all" data-path="modelos-de-ia" href="#"><span class="material-symbols-outlined mr-3 text-[20px]">smart_toy</span><span class="text-body-md font-body-md">Modelos de IA</span></a><a class="flex items-center px-unit-md py-2.5 rounded-lg text-white/60 hover:text-white hover:bg-white/5 transition-all" data-path="ejecuciones" href="#"><span class="material-symbols-outlined mr-3 text-[20px]">play_circle</span><span class="text-body-md font-body-md">Ejecuciones</span></a><a class="flex items-center px-unit-md py-2.5 rounded-lg text-white/60 hover:text-white hover:bg-white/5 transition-all" data-path="historial-de-costos" href="#"><span class="material-symbols-outlined mr-3 text-[20px]">payments</span><span class="text-body-md font-body-md">Historial de Costos</span></a><a aria-current="page" class="flex items-center px-unit-md py-2.5 rounded-lg transition-all bg-primary text-white shadow-sm" data-path="documentos" href="#"><span class="material-symbols-outlined mr-3 text-[20px]">description</span><span class="text-body-md font-body-md font-medium">Documentos</span></a><a class="flex items-center px-unit-md py-2.5 rounded-lg text-white/60 hover:text-white hover:bg-white/5 transition-all" data-path="ajustes" href="#"><span class="material-symbols-outlined mr-3 text-[20px]">settings</span><span class="text-body-md font-body-md">Ajustes</span></a></nav><div class="px-unit-md pb-unit-lg space-y-4"><div class="bg-[#131b2e] border border-white/5 p-unit-md rounded-xl space-y-3"><div class="flex justify-between text-slate-400 text-[11px] font-semibold tracking-wider"><span class="">CUOTA ACTUAL</span><span class="text-slate-200">41%</span></div><div class="flex items-baseline justify-between text-white font-headline-md text-base"><span class="font-bold tracking-tight text-white">$8.40 <span class="text-slate-400 font-normal text-xs">/ $20.00</span></span></div><div class="h-1.5 w-full bg-slate-800 rounded-full overflow-hidden"><div class="h-full bg-emerald-500 rounded-full" style="width: 41%"></div></div><div class="flex items-center justify-between pt-0.5"><p class="text-slate-400 text-[10px]">Renueva el 01/06/2025</p></div><button class="w-full py-1.5 rounded-lg bg-slate-800/80 hover:bg-slate-700/80 text-slate-200 hover:text-white text-xs font-medium transition-colors border border-white/5 text-center">Ver detalles</button></div><div class="flex items-center gap-3 pt-3 border-t border-white/10"><img alt="Juan Pérez" class="w-9 h-9 rounded-full object-cover border border-white/20" src="https://lh3.googleusercontent.com/aida/AEtjO1WP6GPazsIKzYAU_cAXS_UMiMdEn-YRAQOh55dhEK_tMLLasef3zlbeR66jFD4-mWWPabjfPLs3VW5l1pKlW6uRGcGUUjzXi85cUuO-QTdTga6fVdaPcc5O8PBc_edHraEZnDILuukniqrUBJMCS0M6oM038K_tcimtz1bnSkfhQpBQt1YRyVp111vMd4520Mw3csb8VwgisoWZ5SuqXf3Qab0iGauw2f6a9VYZtoM7FW1GAOSHZmSQ2fG8"><div class="flex-1 min-w-0"><p class="text-white text-body-sm font-semibold truncate">Juan Pérez</p><p class="text-slate-400 text-[11px] truncate">Investigador</p></div><span class="material-symbols-outlined text-slate-400 text-sm">expand_more</span></div></div></aside><div class="pl-sidebar-width"><header class="fixed top-0 left-sidebar-width right-0 h-16 bg-white/80 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-40 flex items-center justify-end px-unit-lg gap-5 border-b border-slate-200/80"><div class="flex items-center gap-4"><div class="relative cursor-pointer text-slate-500 hover:text-primary transition-colors"><span class="material-symbols-outlined text-[22px]">notifications</span><span class="absolute top-0 right-0 w-2 h-2 bg-rose-500 rounded-full ring-2 ring-white"></span></div><span class="material-symbols-outlined text-slate-500 cursor-pointer hover:text-primary transition-colors text-[22px]">help_outline</span><div class="h-5 w-[1px] bg-slate-200"></div><div class="flex items-center gap-2 cursor-pointer"><img alt="Juan Pérez" class="w-8 h-8 rounded-full object-cover border border-slate-200" src="https://lh3.googleusercontent.com/aida/AEtjO1WP6GPazsIKzYAU_cAXS_UMiMdEn-YRAQOh55dhEK_tMLLasef3zlbeR66jFD4-mWWPabjfPLs3VW5l1pKlW6uRGcGUUjzXi85cUuO-QTdTga6fVdaPcc5O8PBc_edHraEZnDILuukniqrUBJMCS0M6oM038K_tcimtz1bnSkfhQpBQt1YRyVp111vMd4520Mw3csb8VwgisoWZ5SuqXf3Qab0iGauw2f6a9VYZtoM7FW1GAOSHZmSQ2fG8"><span class="material-symbols-outlined text-slate-400 text-[18px]">expand_more</span></div></div></header><main class="relative pt-16 min-h-screen"><div class="flex flex-col w-full p-container-margin space-y-4">
+<!-- Encabezado principal de Documentos -->
+<div class="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+<div>
+<div class="flex items-center gap-2 text-body-sm text-slate-500 mb-1">
+<span class="">Investigaciones</span>
+<span class="material-symbols-outlined text-[14px]">chevron_right</span>
+<span class="text-primary font-medium">Entregables y Reportes</span>
+</div>
+<h1 class="font-headline-xl text-headline-xl text-on-surface tracking-tight font-bold">Documentos</h1>
+<p class="font-body-md text-on-surface-variant mt-1">Almacena y gestiona los entregables finales generados por los workflows (PDF, Markdown, resúmenes ejecutivos, reportes de investigación)</p>
+</div>
+<div class="flex items-center gap-3">
+<button class="flex items-center gap-2 bg-white px-3.5 py-2 rounded-lg shadow-sm border border-slate-200 text-body-sm text-on-surface hover:bg-slate-50 transition-colors">
+<span class="material-symbols-outlined text-slate-500 text-[18px]">cloud_sync</span>
+<span class="">Sincronizar Cloud</span>
+</button>
+<button class="bg-primary hover:bg-indigo-700 text-white px-4 py-2 rounded-lg font-headline-md text-body-sm shadow-sm transition-colors flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px]">add_circle</span>
+<span class="">Nuevo Documento</span>
+</button>
+</div>
+</div>
+<!-- Tarjetas de métricas superiores -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<!-- Total Documentos -->
+<div class="bg-white p-6 rounded-xl shadow-sm border border-slate-200 flex flex-col justify-between relative overflow-hidden">
+<div class="flex items-center justify-between">
+<span class="font-label-caps text-label-caps text-on-surface-variant uppercase">TOTAL DOCUMENTOS</span>
+<div class="w-10 h-10 rounded-lg bg-indigo-50 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[20px]">folder</span>
+</div>
+</div>
+<div class="mt-4 flex items-baseline gap-2">
+<span class="font-headline-xl text-headline-xl text-on-surface font-bold">48</span>
+<span class="font-body-sm text-on-surface-variant">archivos activos</span>
+</div>
+<div class="mt-2 flex items-center gap-1.5 text-emerald-600 font-body-sm">
+<span class="material-symbols-outlined text-[16px]">arrow_upward</span>
+<span class="">+6 generados esta semana</span>
+</div>
+</div>
+<!-- Almacenamiento Utilizado -->
+<div class="bg-white p-6 rounded-xl shadow-sm border border-slate-200 flex flex-col justify-between relative overflow-hidden">
+<div class="flex items-center justify-between">
+<span class="font-label-caps text-label-caps text-on-surface-variant uppercase">ALMACENAMIENTO UTILIZADO</span>
+<div class="w-10 h-10 rounded-lg bg-blue-50 flex items-center justify-center text-blue-600">
+<span class="material-symbols-outlined text-[20px]">cloud_done</span>
+</div>
+</div>
+<div class="mt-4 flex items-baseline gap-2">
+<span class="font-headline-xl text-headline-xl text-on-surface font-bold">1.2 GB</span>
+<span class="font-body-sm text-on-surface-variant">/ 5.0 GB</span>
+</div>
+<div class="mt-2 flex items-center justify-between text-on-surface-variant font-body-sm">
+<div class="w-full bg-slate-100 h-2 rounded-full overflow-hidden mr-3">
+<div class="bg-indigo-600 h-full rounded-full" style="width: 24%"></div>
+</div>
+<span class="text-xs text-slate-500 whitespace-nowrap">24% ocupado</span>
+</div>
+</div>
+<!-- Último Entregable -->
+<div class="bg-white p-6 rounded-xl shadow-sm border border-slate-200 flex flex-col justify-between relative overflow-hidden">
+<div class="flex items-center justify-between">
+<span class="font-label-caps text-label-caps text-on-surface-variant uppercase">ÚLTIMO ENTREGABLE</span>
+<div class="w-10 h-10 rounded-lg bg-emerald-50 flex items-center justify-center text-emerald-600">
+<span class="material-symbols-outlined text-[20px]">auto_awesome</span>
+</div>
+</div>
+<div class="mt-4 flex items-baseline gap-2">
+<span class="font-headline-xl text-headline-xl text-on-surface font-bold">Hace 15 min</span>
+</div>
+<div class="mt-2 flex items-center gap-1.5 text-slate-600 font-body-sm truncate">
+<span class="material-symbols-outlined text-[16px] text-emerald-600">task_alt</span>
+<span class="truncate">Reporte Automatizado Financiero Q3</span>
+</div>
+</div>
+</div>
+<!-- Sección de Tabla, Filtros y Lista de Documentos -->
+<div class="bg-white rounded-xl shadow-sm border border-slate-200 overflow-hidden flex flex-col">
+<!-- Barra de búsqueda y filtros -->
+<div class="p-4 border-b border-slate-200 flex flex-col md:flex-row items-center justify-between gap-4 bg-slate-50/50">
+<div class="flex items-center gap-3 w-full md:w-auto flex-1 max-w-xl">
+<div class="relative w-full">
+<span class="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none material-symbols-outlined text-slate-400 text-[18px]">search</span>
+<input class="w-full pl-10 pr-4 py-2 bg-white border border-slate-200 rounded-lg text-body-md text-on-surface placeholder:text-slate-400 focus:outline-none focus:border-primary transition-all text-sm" placeholder="Buscar documentos por título, workflow o formato..." type="text">
+</div>
+</div>
+<div class="flex flex-wrap items-center gap-2.5 w-full md:w-auto justify-end">
+<!-- Filtro por Formato con pills -->
+<div class="flex items-center bg-slate-100 p-1 rounded-lg text-xs font-medium border border-slate-200/60">
+<button class="px-2.5 py-1 rounded bg-white text-on-surface font-semibold shadow-xs">Todos</button>
+<button class="px-2.5 py-1 rounded text-slate-600 hover:text-slate-900 transition-colors">PDF</button>
+<button class="px-2.5 py-1 rounded text-slate-600 hover:text-slate-900 transition-colors">Markdown</button>
+<button class="px-2.5 py-1 rounded text-slate-600 hover:text-slate-900 transition-colors">JSON</button>
+<button class="px-2.5 py-1 rounded text-slate-600 hover:text-slate-900 transition-colors">DOCX</button>
+</div>
+<!-- Filtro por Orden -->
+<div class="flex items-center gap-1.5 bg-white px-3 py-1.5 rounded-lg border border-slate-200 text-body-sm text-slate-600 cursor-pointer hover:border-slate-300">
+<span class="text-xs text-slate-400">Ordenar:</span>
+<span class="font-medium text-xs text-on-surface">Más recientes</span>
+<span class="material-symbols-outlined text-[16px] text-slate-400">expand_more</span>
+</div>
+<!-- Vista (Grid / Lista) -->
+<div class="flex items-center border border-slate-200 rounded-lg bg-white overflow-hidden">
+<button class="p-1.5 text-primary bg-indigo-50/80 hover:bg-indigo-100/60 transition-colors" title="Vista Lista">
+<span class="material-symbols-outlined text-[18px]">format_list_bulleted</span>
+</button>
+<button class="p-1.5 text-slate-400 hover:text-slate-600 hover:bg-slate-50 transition-colors border-l border-slate-200" title="Vista Cuadrícula">
+<span class="material-symbols-outlined text-[18px]">grid_view</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Tabla de documentos -->
+<div class="overflow-x-auto">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="border-b border-slate-200 text-slate-500 font-label-caps text-label-caps bg-slate-50/70 tracking-wider text-[11px]">
+<th class="py-3 px-6">DOCUMENTO</th>
+<th class="py-3 px-6">WORKFLOW DE ORIGEN</th>
+<th class="py-3 px-6">VERSIÓN</th>
+<th class="py-3 px-6">TAMAÑO</th>
+<th class="py-3 px-6">FECHA Y AUTOR</th>
+<th class="py-3 px-6 text-right">ACCIONES</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-slate-100 font-body-md text-on-surface">
+<!-- Item 1: PDF Resumen Ejecutivo LATAM -->
+<tr class="hover:bg-slate-50/60 transition-colors group">
+<td class="py-4 px-6">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-lg bg-rose-50 border border-rose-100 flex items-center justify-center text-rose-600 shrink-0">
+<span class="material-symbols-outlined text-[20px]">picture_as_pdf</span>
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-2">
+<span class="font-semibold text-slate-900 group-hover:text-primary transition-colors truncate">Resumen Ejecutivo - Tendencias IA LATAM 2025</span>
+<span class="inline-flex items-center px-1.5 py-0.5 rounded text-[10px] font-bold bg-rose-100 text-rose-700">PDF</span>
+</div>
+<span class="text-xs text-slate-400 mt-0.5">Síntesis ejecutiva de inversión e impacto tecnológico regional</span>
+</div>
+</div>
+</td>
+<td class="py-4 px-6">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[16px] text-indigo-500">account_tree</span>
+<div class="flex flex-col">
+<span class="text-xs font-semibold text-slate-800">Investigación IA LATAM</span>
+<span class="text-[11px] text-slate-400 font-mono-code">Workflow #002</span>
+</div>
+</div>
+</td>
+<td class="py-4 px-6">
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full text-xs font-medium bg-emerald-50 text-emerald-700 border border-emerald-200/50">
+<span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span>
+              Final (v1.2)
+            </span>
+</td>
+<td class="py-4 px-6 font-mono-code text-xs text-slate-600">2.4 MB</td>
+<td class="py-4 px-6">
+<div class="flex flex-col">
+<span class="text-xs text-slate-700 font-medium">Hace 15 min</span>
+<span class="text-[11px] text-slate-400">Juan Pérez (Ejecución #142)</span>
+</div>
+</td>
+<td class="py-4 px-6 text-right">
+<div class="flex items-center justify-end gap-1">
+<button class="p-1.5 text-slate-400 hover:text-primary hover:bg-slate-100 rounded-lg transition-colors" title="Previsualizar">
+<span class="material-symbols-outlined text-[18px]">visibility</span>
+</button>
+<button class="p-1.5 text-slate-400 hover:text-emerald-600 hover:bg-slate-100 rounded-lg transition-colors" title="Descargar">
+<span class="material-symbols-outlined text-[18px]">download</span>
+</button>
+<button class="p-1.5 text-slate-400 hover:text-blue-600 hover:bg-slate-100 rounded-lg transition-colors" title="Compartir">
+<span class="material-symbols-outlined text-[18px]">share</span>
+</button>
+<button class="p-1.5 text-slate-400 hover:text-slate-700 hover:bg-slate-100 rounded-lg transition-colors" title="Más opciones">
+<span class="material-symbols-outlined text-[18px]">more_vert</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Item 2: MD Análisis Educación -->
+<tr class="hover:bg-slate-50/60 transition-colors group">
+<td class="py-4 px-6">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-lg bg-sky-50 border border-sky-100 flex items-center justify-center text-sky-600 shrink-0">
+<span class="material-symbols-outlined text-[20px]">code_blocks</span>
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-2">
+<span class="font-semibold text-slate-900 group-hover:text-primary transition-colors truncate">Análisis IA Generativa en Educación Superior</span>
+<span class="inline-flex items-center px-1.5 py-0.5 rounded text-[10px] font-bold bg-sky-100 text-sky-700">MD</span>
+</div>
+<span class="text-xs text-slate-400 mt-0.5">Estructura curricular y directrices de evaluación adaptativa</span>
+</div>
+</div>
+</td>
+<td class="py-4 px-6">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[16px] text-indigo-500">account_tree</span>
+<div class="flex flex-col">
+<span class="text-xs font-semibold text-slate-800">Investigación IA Educación</span>
+<span class="text-[11px] text-slate-400 font-mono-code">Workflow #001</span>
+</div>
+</div>
+</td>
+<td class="py-4 px-6">
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full text-xs font-medium bg-emerald-50 text-emerald-700 border border-emerald-200/50">
+<span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span>
+              Final (v2.0)
+            </span>
+</td>
+<td class="py-4 px-6 font-mono-code text-xs text-slate-600">450 KB</td>
+<td class="py-4 px-6">
+<div class="flex flex-col">
+<span class="text-xs text-slate-700 font-medium">Hoy, 10:45 AM</span>
+<span class="text-[11px] text-slate-400">Juan Pérez (Ejecución #141)</span>
+</div>
+</td>
+<td class="py-4 px-6 text-right">
+<div class="flex items-center justify-end gap-1">
+<button class="p-1.5 text-slate-400 hover:text-primary hover:bg-slate-100 rounded-lg transition-colors" title="Previsualizar">
+<span class="material-symbols-outlined text-[18px]">visibility</span>
+</button>
+<button class="p-1.5 text-slate-400 hover:text-emerald-600 hover:bg-slate-100 rounded-lg transition-colors" title="Descargar">
+<span class="material-symbols-outlined text-[18px]">download</span>
+</button>
+<button class="p-1.5 text-slate-400 hover:text-blue-600 hover:bg-slate-100 rounded-lg transition-colors" title="Compartir">
+<span class="material-symbols-outlined text-[18px]">share</span>
+</button>
+<button class="p-1.5 text-slate-400 hover:text-slate-700 hover:bg-slate-100 rounded-lg transition-colors" title="Más opciones">
+<span class="material-symbols-outlined text-[18px]">more_vert</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Item 3: PDF Informe Médico NLP Clínico -->
+<tr class="hover:bg-slate-50/60 transition-colors group">
+<td class="py-4 px-6">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-lg bg-rose-50 border border-rose-100 flex items-center justify-center text-rose-600 shrink-0">
+<span class="material-symbols-outlined text-[20px]">picture_as_pdf</span>
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-2">
+<span class="font-semibold text-slate-900 group-hover:text-primary transition-colors truncate">Informe Médico NLP Clínico &amp; Diagnóstico</span>
+<span class="inline-flex items-center px-1.5 py-0.5 rounded text-[10px] font-bold bg-rose-100 text-rose-700">PDF</span>
+</div>
+<span class="text-xs text-slate-400 mt-0.5">Auditoría de consistencia en historias clínicas automatizadas</span>
+</div>
+</div>
+</td>
+<td class="py-4 px-6">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[16px] text-indigo-500">account_tree</span>
+<div class="flex flex-col">
+<span class="text-xs font-semibold text-slate-800">Análisis NLP Médico</span>
+<span class="text-[11px] text-slate-400 font-mono-code">Workflow #003</span>
+</div>
+</div>
+</td>
+<td class="py-4 px-6">
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full text-xs font-medium bg-amber-50 text-amber-700 border border-amber-200/50">
+<span class="w-1.5 h-1.5 rounded-full bg-amber-500"></span>
+              Borrador (v0.9)
+            </span>
+</td>
+<td class="py-4 px-6 font-mono-code text-xs text-slate-600">3.8 MB</td>
+<td class="py-4 px-6">
+<div class="flex flex-col">
+<span class="text-xs text-slate-700 font-medium">Ayer, 18:22</span>
+<span class="text-[11px] text-slate-400">Juan Pérez (Ejecución #140)</span>
+</div>
+</td>
+<td class="py-4 px-6 text-right">
+<div class="flex items-center justify-end gap-1">
+<button class="p-1.5 text-slate-400 hover:text-primary hover:bg-slate-100 rounded-lg transition-colors" title="Previsualizar">
+<span class="material-symbols-outlined text-[18px]">visibility</span>
+</button>
+<button class="p-1.5 text-slate-400 hover:text-emerald-600 hover:bg-slate-100 rounded-lg transition-colors" title="Descargar">
+<span class="material-symbols-outlined text-[18px]">download</span>
+</button>
+<button class="p-1.5 text-slate-400 hover:text-blue-600 hover:bg-slate-100 rounded-lg transition-colors" title="Compartir">
+<span class="material-symbols-outlined text-[18px]">share</span>
+</button>
+<button class="p-1.5 text-slate-400 hover:text-slate-700 hover:bg-slate-100 rounded-lg transition-colors" title="Más opciones">
+<span class="material-symbols-outlined text-[18px]">more_vert</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Item 4: MD Optimización de Prompts -->
+<tr class="hover:bg-slate-50/60 transition-colors group">
+<td class="py-4 px-6">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-lg bg-sky-50 border border-sky-100 flex items-center justify-center text-sky-600 shrink-0">
+<span class="material-symbols-outlined text-[20px]">code_blocks</span>
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-2">
+<span class="font-semibold text-slate-900 group-hover:text-primary transition-colors truncate">Optimización de Prompts y Rendimiento de Modelos</span>
+<span class="inline-flex items-center px-1.5 py-0.5 rounded text-[10px] font-bold bg-sky-100 text-sky-700">MD</span>
+</div>
+<span class="text-xs text-slate-400 mt-0.5">Benchmark comparativo entre Claude 3.5 Sonnet y GPT-4o</span>
+</div>
+</div>
+</td>
+<td class="py-4 px-6">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[16px] text-indigo-500">account_tree</span>
+<div class="flex flex-col">
+<span class="text-xs font-semibold text-slate-800">Evaluación de Prompts Lab</span>
+<span class="text-[11px] text-slate-400 font-mono-code">Workflow #012</span>
+</div>
+</div>
+</td>
+<td class="py-4 px-6">
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full text-xs font-medium bg-emerald-50 text-emerald-700 border border-emerald-200/50">
+<span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span>
+              Final (v1.0)
+            </span>
+</td>
+<td class="py-4 px-6 font-mono-code text-xs text-slate-600">620 KB</td>
+<td class="py-4 px-6">
+<div class="flex flex-col">
+<span class="text-xs text-slate-700 font-medium">28 May, 2025</span>
+<span class="text-[11px] text-slate-400">Juan Pérez (Ejecución #138)</span>
+</div>
+</td>
+<td class="py-4 px-6 text-right">
+<div class="flex items-center justify-end gap-1">
+<button class="p-1.5 text-slate-400 hover:text-primary hover:bg-slate-100 rounded-lg transition-colors" title="Previsualizar">
+<span class="material-symbols-outlined text-[18px]">visibility</span>
+</button>
+<button class="p-1.5 text-slate-400 hover:text-emerald-600 hover:bg-slate-100 rounded-lg transition-colors" title="Descargar">
+<span class="material-symbols-outlined text-[18px]">download</span>
+</button>
+<button class="p-1.5 text-slate-400 hover:text-blue-600 hover:bg-slate-100 rounded-lg transition-colors" title="Compartir">
+<span class="material-symbols-outlined text-[18px]">share</span>
+</button>
+<button class="p-1.5 text-slate-400 hover:text-slate-700 hover:bg-slate-100 rounded-lg transition-colors" title="Más opciones">
+<span class="material-symbols-outlined text-[18px]">more_vert</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Item 5: PDF Reporte Automatizado Financiero Q3 -->
+<tr class="hover:bg-slate-50/60 transition-colors group">
+<td class="py-4 px-6">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-lg bg-rose-50 border border-rose-100 flex items-center justify-center text-rose-600 shrink-0">
+<span class="material-symbols-outlined text-[20px]">picture_as_pdf</span>
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-2">
+<span class="font-semibold text-slate-900 group-hover:text-primary transition-colors truncate">Reporte Automatizado Financiero Q3 - FinTech</span>
+<span class="inline-flex items-center px-1.5 py-0.5 rounded text-[10px] font-bold bg-rose-100 text-rose-700">PDF</span>
+</div>
+<span class="text-xs text-slate-400 mt-0.5">Extracción y análisis de patentes y proyecciones de gasto</span>
+</div>
+</div>
+</td>
+<td class="py-4 px-6">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[16px] text-indigo-500">account_tree</span>
+<div class="flex flex-col">
+<span class="text-xs font-semibold text-slate-800">Extracción de Patentes FinTech</span>
+<span class="text-[11px] text-slate-400 font-mono-code">Workflow #004</span>
+</div>
+</div>
+</td>
+<td class="py-4 px-6">
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full text-xs font-medium bg-emerald-50 text-emerald-700 border border-emerald-200/50">
+<span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span>
+              Final (v1.1)
+            </span>
+</td>
+<td class="py-4 px-6 font-mono-code text-xs text-slate-600">5.1 MB</td>
+<td class="py-4 px-6">
+<div class="flex flex-col">
+<span class="text-xs text-slate-700 font-medium">27 May, 2025</span>
+<span class="text-[11px] text-slate-400">Juan Pérez (Ejecución #134)</span>
+</div>
+</td>
+<td class="py-4 px-6 text-right">
+<div class="flex items-center justify-end gap-1">
+<button class="p-1.5 text-slate-400 hover:text-primary hover:bg-slate-100 rounded-lg transition-colors" title="Previsualizar">
+<span class="material-symbols-outlined text-[18px]">visibility</span>
+</button>
+<button class="p-1.5 text-slate-400 hover:text-emerald-600 hover:bg-slate-100 rounded-lg transition-colors" title="Descargar">
+<span class="material-symbols-outlined text-[18px]">download</span>
+</button>
+<button class="p-1.5 text-slate-400 hover:text-blue-600 hover:bg-slate-100 rounded-lg transition-colors" title="Compartir">
+<span class="material-symbols-outlined text-[18px]">share</span>
+</button>
+<button class="p-1.5 text-slate-400 hover:text-slate-700 hover:bg-slate-100 rounded-lg transition-colors" title="Más opciones">
+<span class="material-symbols-outlined text-[18px]">more_vert</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Item 6: JSON Dataset Extracción de Citas -->
+<tr class="hover:bg-slate-50/60 transition-colors group">
+<td class="py-4 px-6">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-lg bg-amber-50 border border-amber-100 flex items-center justify-center text-amber-600 shrink-0">
+<span class="material-symbols-outlined text-[20px]">data_object</span>
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-2">
+<span class="font-semibold text-slate-900 group-hover:text-primary transition-colors truncate">Dataset Bibliográfico Normalizado &amp; Citas</span>
+<span class="inline-flex items-center px-1.5 py-0.5 rounded text-[10px] font-bold bg-amber-100 text-amber-800">JSON</span>
+</div>
+<span class="text-xs text-slate-400 mt-0.5">Metadatos estructurados en esquema CSL-JSON para Zotero</span>
+</div>
+</div>
+</td>
+<td class="py-4 px-6">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[16px] text-indigo-500">account_tree</span>
+<div class="flex flex-col">
+<span class="text-xs font-semibold text-slate-800">Generación Resumen Ejecutivo</span>
+<span class="text-[11px] text-slate-400 font-mono-code">Workflow #005</span>
+</div>
+</div>
+</td>
+<td class="py-4 px-6">
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full text-xs font-medium bg-emerald-50 text-emerald-700 border border-emerald-200/50">
+<span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span>
+              Final (v1.0)
+            </span>
+</td>
+<td class="py-4 px-6 font-mono-code text-xs text-slate-600">890 KB</td>
+<td class="py-4 px-6">
+<div class="flex flex-col">
+<span class="text-xs text-slate-700 font-medium">25 May, 2025</span>
+<span class="text-[11px] text-slate-400">Juan Pérez (Ejecución #129)</span>
+</div>
+</td>
+<td class="py-4 px-6 text-right">
+<div class="flex items-center justify-end gap-1">
+<button class="p-1.5 text-slate-400 hover:text-primary hover:bg-slate-100 rounded-lg transition-colors" title="Previsualizar">
+<span class="material-symbols-outlined text-[18px]">visibility</span>
+</button>
+<button class="p-1.5 text-slate-400 hover:text-emerald-600 hover:bg-slate-100 rounded-lg transition-colors" title="Descargar">
+<span class="material-symbols-outlined text-[18px]">download</span>
+</button>
+<button class="p-1.5 text-slate-400 hover:text-blue-600 hover:bg-slate-100 rounded-lg transition-colors" title="Compartir">
+<span class="material-symbols-outlined text-[18px]">share</span>
+</button>
+<button class="p-1.5 text-slate-400 hover:text-slate-700 hover:bg-slate-100 rounded-lg transition-colors" title="Más opciones">
+<span class="material-symbols-outlined text-[18px]">more_vert</span>
+</button>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- Paginación limpia -->
+<div class="p-4 border-t border-slate-200 flex flex-col sm:flex-row items-center justify-between gap-3 bg-white">
+<span class="font-body-sm text-on-surface-variant text-xs">Mostrando 1-6 de 48 documentos entregables</span>
+<div class="flex items-center gap-1">
+<button class="px-3 py-1.5 rounded-lg border border-slate-200 text-body-sm text-on-surface-variant hover:bg-slate-50 disabled:opacity-40 transition-colors" disabled="">Anterior</button>
+<button class="px-3 py-1.5 rounded-lg bg-primary text-white text-body-sm font-semibold shadow-xs">1</button>
+<button class="px-3 py-1.5 rounded-lg border border-slate-200 text-body-sm text-on-surface hover:bg-slate-50 transition-colors">2</button>
+<button class="px-3 py-1.5 rounded-lg border border-slate-200 text-body-sm text-on-surface hover:bg-slate-50 transition-colors">3</button>
+<span class="px-2 text-slate-400 text-xs">...</span>
+<button class="px-3 py-1.5 rounded-lg border border-slate-200 text-body-sm text-on-surface hover:bg-slate-50 transition-colors">8</button>
+<button class="px-3 py-1.5 rounded-lg border border-slate-200 text-body-sm text-on-surface hover:bg-slate-50 transition-colors">Siguiente</button>
+</div>
+</div>
+</div>
+</div></main></div>
+
+</body></html>

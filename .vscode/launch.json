@@ -1,0 +1,14 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Spring Boot-SaasPromptsApplication<saas-prompts>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "edu.utp.saasprompts.SaasPromptsApplication",
+            "projectName": "saas-prompts",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        }
+    ]
+}

@@ -1,0 +1,453 @@
+<!DOCTYPE html><html lang="en" style=""><head><meta charset="utf-8"><meta content="width=device-width, initial-scale=1.0" name="viewport"><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={theme:{extend:{"colors":{"surface-tint":"#4d44e3","on-primary-fixed":"#0f0069","surface-dim":"#dcd8e5","node-prompt":"#4F46E5","tertiary-fixed":"#ffdbcc","inverse-primary":"#c3c0ff","on-tertiary-container":"#ffd2be","on-tertiary-fixed-variant":"#7b2f00","node-output":"#E11D48","on-secondary-fixed":"#131b2e","tertiary":"#7e3000","sidebar-navy":"#0F172A","on-tertiary-fixed":"#351000","surface-variant":"#e4e1ee","inverse-on-surface":"#f3effc","canvas-grid":"#E2E8F0","on-primary-fixed-variant":"#3323cc","surface-container":"#f0ecf9","node-logic":"#F59E0B","on-surface":"#1b1b24","inverse-surface":"#302f39","node-input":"#10B981","secondary-fixed-dim":"#bec6e0","node-search":"#A855F7","on-secondary-container":"#5c647a","primary-container":"#4f46e5","surface-container-high":"#eae6f4","primary-fixed-dim":"#c3c0ff","tertiary-fixed-dim":"#ffb695","secondary-fixed":"#dae2fd","surface-bright":"#fcf8ff","error-container":"#ffdad6","on-secondary":"#ffffff","background":"#fcf8ff","primary-fixed":"#e2dfff","surface-container-low":"#f5f2ff","outline-variant":"#c7c4d8","on-primary":"#ffffff","surface":"#fcf8ff","on-secondary-fixed-variant":"#3f465c","on-surface-variant":"#464555","slate-background":"#F8FAFC","on-error-container":"#93000a","secondary-container":"#dae2fd","on-tertiary":"#ffffff","surface-container-lowest":"#ffffff","primary":"#3525cd","on-error":"#ffffff","on-background":"#1b1b24","outline":"#777587","tertiary-container":"#a44100","surface-container-highest":"#e4e1ee","secondary":"#565e74","on-primary-container":"#dad7ff","error":"#ba1a1a"},"borderRadius":{"DEFAULT":"0.25rem","lg":"0.5rem","xl":"0.75rem","full":"9999px"},"spacing":{"unit-md":"16px","node-gap":"32px","unit-sm":"8px","container-margin":"24px","sidebar-width":"240px","inspector-width":"360px","gutter":"16px","unit-lg":"24px","unit-xs":"4px"},"fontFamily":{"label-caps":["Inter"],"headline-md":["Inter"],"mono-code":["monospace"],"headline-xl":["Inter"],"body-sm":["Inter"],"body-lg":["Inter"],"headline-lg":["Inter"],"body-md":["Inter"]},"fontSize":{"label-caps":["11px",{"lineHeight":"16px","letterSpacing":"0.05em","fontWeight":"600"}],"headline-md":["18px",{"lineHeight":"28px","fontWeight":"600"}],"mono-code":["13px",{"lineHeight":"18px","fontWeight":"400"}],"headline-xl":["36px",{"lineHeight":"44px","letterSpacing":"-0.02em","fontWeight":"700"}],"body-sm":["12px",{"lineHeight":"16px","fontWeight":"400"}],"body-lg":["16px",{"lineHeight":"24px","fontWeight":"400"}],"headline-lg":["24px",{"lineHeight":"32px","letterSpacing":"-0.01em","fontWeight":"600"}],"body-md":["14px",{"lineHeight":"20px","fontWeight":"400"}]}}}}</script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&amp;display=swap" rel="stylesheet"></head><body class="bg-slate-background font-body-md text-on-surface"><aside class="fixed left-0 top-0 h-full w-sidebar-width bg-sidebar-navy z-50 flex flex-col shadow-xl"><div class="p-unit-lg flex items-center gap-3 border-b border-white/5"><img alt="Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1XwSgcaB06WocgwVPR74TfCoTnG3J17_q6igMYCfxuYpErkpaCn0d2KlnxGxgssAVw8eVRkyt424bCcugV-glPq7KTWJFreonDKHN5xbKQWB5DDiFJorJqyPzFQ9T3Kq-yQLrqf8a4yZkrFmID0TYKEmaJ_jTTfu8nlEvS4-wfXl8u_dyYVQRyDO-d2xU6uSjUkQijJPo4RixMECjxVmeZRpYtzEd3b72pMN8cQUIqC0c3pici2vKyTySp1"><span class="text-white font-headline-md text-headline-md tracking-tight">PromptFlow</span></div><nav class="flex-1 py-unit-md px-unit-sm space-y-1 overflow-y-auto" data-active-classes="bg-primary text-white"><a class="flex items-center px-unit-md py-2.5 rounded-lg text-white/60 hover:text-white hover:bg-white/5 transition-all group" data-path="inicio" href="#"><span class="material-symbols-outlined mr-3 text-[20px]">home</span><span class="text-body-md font-body-md">Inicio</span></a><a class="flex items-center px-unit-md py-2.5 rounded-lg text-white/60 hover:text-white hover:bg-white/5 transition-all" data-path="investigaciones" href="#"><span class="material-symbols-outlined mr-3 text-[20px]">science</span><span class="text-body-md font-body-md">Investigaciones</span></a><a class="flex items-center px-unit-md py-2.5 rounded-lg text-white/60 hover:text-white hover:bg-white/5 transition-all" data-path="workflows" href="#"><span class="material-symbols-outlined mr-3 text-[20px]">account_tree</span><span class="text-body-md font-body-md">Workflows</span></a><a class="flex items-center px-unit-md py-2.5 rounded-lg text-white/60 hover:text-white hover:bg-white/5 transition-all" data-path="prompts" href="#"><span class="material-symbols-outlined mr-3 text-[20px]">terminal</span><span class="text-body-md font-body-md">Prompts</span></a><a class="flex items-center px-unit-md py-2.5 rounded-lg text-white/60 hover:text-white hover:bg-white/5 transition-all" data-path="plantillas" href="#"><span class="material-symbols-outlined mr-3 text-[20px]">dashboard_customize</span><span class="text-body-md font-body-md">Plantillas</span></a><a class="flex items-center px-unit-md py-2.5 rounded-lg text-white/60 hover:text-white hover:bg-white/5 transition-all" data-path="modelos-de-ia" href="#"><span class="material-symbols-outlined mr-3 text-[20px]">smart_toy</span><span class="text-body-md font-body-md">Modelos de IA</span></a><a class="flex items-center px-unit-md py-2.5 rounded-lg transition-all text-white text-white/60" data-path="ejecuciones" href="#"><span class="material-symbols-outlined mr-3 text-[20px]">play_circle</span><span class="text-body-md font-body-md">Ejecuciones</span></a><a class="flex items-center px-unit-md py-2.5 rounded-lg text-white/60 hover:text-white hover:bg-white/5 transition-all" data-path="historial-de-costos" href="#"><span class="material-symbols-outlined mr-3 text-[20px]">payments</span><span class="text-body-md font-body-md">Historial de Costos</span></a><a class="flex items-center px-unit-md py-2.5 rounded-lg text-white/60 hover:text-white hover:bg-white/5 transition-all" data-path="documentos" href="#"><span class="material-symbols-outlined mr-3 text-[20px]">description</span><span class="text-body-md font-body-md">Documentos</span></a><a aria-current="page" class="flex items-center px-unit-md py-2.5 rounded-lg hover:text-white hover:bg-white/5 transition-all bg-primary text-white" data-path="ajustes" href="#"><span class="material-symbols-outlined mr-3 text-[20px]">settings</span><span class="text-body-md font-body-md">Ajustes</span></a></nav><div class="px-unit-md pb-unit-lg space-y-4"><div class="bg-white/10 p-unit-md rounded-xl space-y-3"><div class="flex justify-between text-white/80 text-label-caps font-label-caps"><span class="">CUOTA ACTUAL</span><span class="">41%</span></div><div class="flex items-baseline justify-between"><span class="text-headline-md font-headline-md text-white">$8.40 / $20.00</span></div><div class="h-1.5 w-full bg-white/10 rounded-full overflow-hidden"><div class="h-full bg-node-input" style="width: 41%"></div></div><div class="flex items-center justify-between pt-1"><p class="text-white/40 text-[10px]">Renueva el 01/06/2025</p><button class="bg-white/10 hover:bg-white/20 text-white px-3 py-1 rounded-lg text-body-sm font-headline-md transition-colors">Ver detalles</button></div></div><div class="flex items-center gap-3 pt-4 border-t border-white/10"><img alt="Profile" class="w-9 h-9 rounded-full object-cover border border-white/20" src="https://lh3.googleusercontent.com/aida/AEtjO1WP6GPazsIKzYAU_cAXS_UMiMdEn-YRAQOh55dhEK_tMLLasef3zlbeR66jFD4-mWWPabjfPLs3VW5l1pKlW6uRGcGUUjzXi85cUuO-QTdTga6fVdaPcc5O8PBc_edHraEZnDILuukniqrUBJMCS0M6oM038K_tcimtz1bnSkfhQpBQt1YRyVp111vMd4520Mw3csb8VwgisoWZ5SuqXf3Qab0iGauw2f6a9VYZtoM7FW1GAOSHZmSQ2fG8"><div class="flex-1 min-w-0"><p class="text-white text-body-sm font-headline-md truncate">Investigador Senior</p><p class="text-white/40 text-[10px] truncate">Lab Alpha-9</p></div><span class="material-symbols-outlined text-white/40 text-sm">unfold_more</span></div></div></aside><div class="pl-sidebar-width"><header class="fixed top-0 left-sidebar-width right-0 h-16 bg-white/80 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-40 flex items-center justify-between px-unit-lg"><div class="flex items-center gap-4 text-on-surface-variant italic font-body-sm"></div><div class="flex items-center gap-6"><span class="material-symbols-outlined text-on-surface-variant cursor-pointer hover:text-primary transition-colors">notifications</span><span class="material-symbols-outlined text-on-surface-variant cursor-pointer hover:text-primary transition-colors">help_outline</span><div class="h-6 w-[1px] bg-slate-200"></div><img alt="Profile" class="w-8 h-8 rounded-full object-cover border border-slate-200" src="https://lh3.googleusercontent.com/aida/AEtjO1WP6GPazsIKzYAU_cAXS_UMiMdEn-YRAQOh55dhEK_tMLLasef3zlbeR66jFD4-mWWPabjfPLs3VW5l1pKlW6uRGcGUUjzXi85cUuO-QTdTga6fVdaPcc5O8PBc_edHraEZnDILuukniqrUBJMCS0M6oM038K_tcimtz1bnSkfhQpBQt1YRyVp111vMd4520Mw3csb8VwgisoWZ5SuqXf3Qab0iGauw2f6a9VYZtoM7FW1GAOSHZmSQ2fG8"></div></header><main class="relative pt-16 min-h-screen"><div class="flex flex-col w-full pb-16">
+<!-- Top Banner / Header Context -->
+<div class="px-unit-lg pt-unit-lg pb-4 flex flex-col md:flex-row md:items-center justify-between gap-4">
+<div>
+<h1 class="text-headline-xl font-headline-xl text-on-surface tracking-tight">Ajustes del Sistema</h1>
+<p class="text-body-md text-on-surface-variant">Gestiona tu cuenta, preferencias globales, API keys y límites de consumo de IA.</p>
+</div>
+<div class="flex items-center gap-3">
+<button class="bg-white border border-slate-200 hover:bg-slate-50 text-on-surface px-unit-md py-2.5 rounded-lg text-body-md font-headline-md transition-colors">Descartar cambios</button>
+<button class="bg-primary hover:bg-primary-container text-on-primary px-unit-md py-2.5 rounded-lg text-body-md font-headline-md shadow-sm transition-colors flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px]">save</span>
+        Guardar cambios
+      </button>
+</div>
+</div>
+<!-- Tabs Navigation Bar -->
+<div class="px-unit-lg border-b border-slate-200 flex items-center gap-8 overflow-x-auto bg-white/50 backdrop-blur sticky top-16 z-30">
+<button class="tab-btn py-4 text-body-md font-headline-md text-primary relative flex items-center gap-2 transition-colors whitespace-nowrap" id="tab-cuenta" onclick="switchTab('cuenta')">
+<span class="material-symbols-outlined text-[18px]">person</span>
+      Cuenta
+      <div class="absolute bottom-0 left-0 right-0 h-0.5 bg-primary rounded-full"></div>
+</button>
+<button class="tab-btn py-4 text-body-md font-headline-md text-on-surface-variant hover:text-on-surface relative flex items-center gap-2 transition-colors whitespace-nowrap" id="tab-preferencias" onclick="switchTab('preferencias')">
+<span class="material-symbols-outlined text-[18px]">tune</span>
+      Preferencias
+    </button>
+<button class="tab-btn py-4 text-body-md font-headline-md text-on-surface-variant hover:text-on-surface relative flex items-center gap-2 transition-colors whitespace-nowrap" id="tab-ia" onclick="switchTab('ia')">
+<span class="material-symbols-outlined text-[18px]">smart_toy</span>
+      Configuración de IA
+    </button>
+<button class="tab-btn py-4 text-body-md font-headline-md text-on-surface-variant hover:text-on-surface relative flex items-center gap-2 transition-colors whitespace-nowrap" id="tab-cuotas" onclick="switchTab('cuotas')">
+<span class="material-symbols-outlined text-[18px]">payments</span>
+      Cuotas
+    </button>
+<button class="tab-btn py-4 text-body-md font-headline-md text-on-surface-variant hover:text-on-surface relative flex items-center gap-2 transition-colors whitespace-nowrap" id="tab-seguridad" onclick="switchTab('seguridad')">
+<span class="material-symbols-outlined text-[18px]">shield</span>
+      Seguridad
+    </button>
+</div>
+<!-- Content Sections Container -->
+<div class="p-unit-lg max-w-6xl w-full mx-auto space-y-8">
+<!-- TAB 1: CUENTA -->
+<section class="tab-content space-y-6" id="content-cuenta">
+<!-- Profile Header Card -->
+<div class="bg-white border border-slate-200 rounded-xl p-unit-lg shadow-sm flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6">
+<div class="flex items-center gap-5">
+<img class="w-20 h-20 rounded-full object-cover shadow-sm" data-alt="Professional high-resolution headshot portrait of a senior AI researcher wearing smart casual attire against a clean neutral background." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDyM09JcrQiKtlTLlekkLUGzHJ6wihn-zdd6-MMY7Asn_61yurv2LnQnJIBpnLDgbtDuR7v7fOxgkhXIKnHJFuEr_c1gvSAxathJbLGB4MKQl0RvqRKLXgSxxyxXkFHbXrxepw5IMiswLPdzf_d8exBytK5zfj4a2V9vgFQUD6eQn4vgVuFMZN4A9NsvMCBm6D8nuiAatDOmB4ZXoYIvKZ9i8mmoWXYKc5RZjNaYUKcIz6g3TYypgVW_w">
+<div>
+<h2 class="text-headline-lg font-headline-lg text-on-surface">Investigador Senior</h2>
+<p class="text-body-md text-on-surface-variant">Lab Alpha-9 • investigador@promptflow.ai</p>
+<div class="flex items-center gap-2 mt-2">
+<span class="bg-primary/10 text-primary text-label-caps px-2.5 py-1 rounded-full">Administrador</span>
+<span class="bg-slate-100 text-on-surface-variant text-label-caps px-2.5 py-1 rounded-full">Verificado</span>
+</div>
+</div>
+</div>
+<button class="bg-white border border-slate-200 hover:bg-slate-50 text-on-surface px-4 py-2 rounded-lg text-body-sm font-headline-md transition-colors">Cambiar Avatar</button>
+</div>
+<!-- Personal Info Grid -->
+<div class="bg-white border border-slate-200 rounded-xl p-unit-lg shadow-sm space-y-6">
+<h3 class="text-headline-md font-headline-md text-on-surface pb-2 border-b border-slate-200">Información Personal</h3>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div class="space-y-2">
+<label class="text-body-sm font-headline-md text-on-surface-variant">Nombre Completo</label>
+<input class="w-full bg-white border border-slate-200 rounded-lg px-4 py-2.5 text-body-md text-on-surface focus:outline-none focus:border-primary transition-colors" type="text" value="Dr. Alexander Vance">
+</div>
+<div class="space-y-2">
+<label class="text-body-sm font-headline-md text-on-surface-variant">Correo Electrónico</label>
+<input class="w-full bg-white border border-slate-200 rounded-lg px-4 py-2.5 text-body-md text-on-surface focus:outline-none focus:border-primary transition-colors" type="email" value="investigador@promptflow.ai">
+</div>
+<div class="space-y-2">
+<label class="text-body-sm font-headline-md text-on-surface-variant">Rol en la Organización</label>
+<input class="w-full bg-slate-50 border border-slate-200 rounded-lg px-4 py-2.5 text-body-md text-on-surface-variant cursor-not-allowed" disabled="" type="text" value="Senior AI Research Lead">
+</div>
+<div class="space-y-2">
+<label class="text-body-sm font-headline-md text-on-surface-variant">Zona Horaria</label>
+<select class="w-full bg-white border border-slate-200 rounded-lg px-4 py-2.5 text-body-md text-on-surface focus:outline-none focus:border-primary transition-colors">
+<option>(GMT-05:00) Hora estándar del este (Bogotá, Lima)</option>
+<option>(GMT+01:00) Hora central europea (Madrid, París)</option>
+</select>
+</div>
+</div>
+</div>
+<!-- Password Update -->
+<div class="bg-white border border-slate-200 rounded-xl p-unit-lg shadow-sm space-y-6">
+<h3 class="text-headline-md font-headline-md text-on-surface pb-2 border-b border-slate-200">Seguridad de la Contraseña</h3>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<div class="space-y-2">
+<label class="text-body-sm font-headline-md text-on-surface-variant">Contraseña Actual</label>
+<input class="w-full bg-white border border-slate-200 rounded-lg px-4 py-2.5 text-body-md text-on-surface focus:outline-none focus:border-primary" placeholder="••••••••••••" type="password">
+</div>
+<div class="space-y-2">
+<label class="text-body-sm font-headline-md text-on-surface-variant">Nueva Contraseña</label>
+<input class="w-full bg-white border border-slate-200 rounded-lg px-4 py-2.5 text-body-md text-on-surface focus:outline-none focus:border-primary" placeholder="••••••••••••" type="password">
+</div>
+<div class="space-y-2">
+<label class="text-body-sm font-headline-md text-on-surface-variant">Confirmar Nueva Contraseña</label>
+<input class="w-full bg-white border border-slate-200 rounded-lg px-4 py-2.5 text-body-md text-on-surface focus:outline-none focus:border-primary" placeholder="••••••••••••" type="password">
+</div>
+</div>
+<div class="flex justify-end pt-2">
+<button class="bg-white border border-slate-200 hover:bg-slate-50 text-on-surface px-4 py-2 rounded-lg text-body-sm font-headline-md transition-colors">Actualizar Contraseña</button>
+</div>
+</div>
+</section>
+<!-- TAB 2: PREFERENCIAS -->
+<section class="tab-content hidden space-y-6" id="content-preferencias">
+<div class="bg-white border border-slate-200 rounded-xl p-unit-lg shadow-sm space-y-6">
+<h3 class="text-headline-md font-headline-md text-on-surface pb-2 border-b border-slate-200">Apariencia y Tema</h3>
+<div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+<label class="cursor-pointer border-2 border-primary rounded-xl p-4 bg-white flex flex-col items-center text-center gap-3">
+<span class="material-symbols-outlined text-[32px] text-primary">light_mode</span>
+<span class="font-headline-md text-on-surface">Modo Claro</span>
+<span class="text-body-sm text-on-surface-variant">Predominio de tonos claros y máxima legibilidad</span>
+<input checked="" class="accent-primary mt-2" name="theme" type="radio">
+</label>
+<label class="cursor-pointer border-2 border-slate-200 hover:border-slate-300 rounded-xl p-4 bg-white flex flex-col items-center text-center gap-3 transition-all">
+<span class="material-symbols-outlined text-[32px] text-on-surface">dark_mode</span>
+<span class="font-headline-md text-on-surface">Modo Oscuro</span>
+<span class="text-body-sm text-on-surface-variant">Ideal para entornos de baja iluminación</span>
+<input class="accent-primary mt-2" name="theme" type="radio">
+</label>
+<label class="cursor-pointer border-2 border-slate-200 hover:border-slate-300 rounded-xl p-4 bg-white flex flex-col items-center text-center gap-3 transition-all">
+<span class="material-symbols-outlined text-[32px] text-on-surface">brightness_auto</span>
+<span class="font-headline-md text-on-surface">Sistema</span>
+<span class="text-body-sm text-on-surface-variant">Sincronizar automáticamente con tu S.O.</span>
+<input class="accent-primary mt-2" name="theme" type="radio">
+</label>
+</div>
+</div>
+<div class="bg-white border border-slate-200 rounded-xl p-unit-lg shadow-sm space-y-6">
+<h3 class="text-headline-md font-headline-md text-on-surface pb-2 border-b border-slate-200">Idioma y Localización</h3>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div class="space-y-2">
+<label class="text-body-sm font-headline-md text-on-surface-variant">Idioma de la Interfaz</label>
+<select class="w-full bg-white border border-slate-200 rounded-lg px-4 py-2.5 text-body-md text-on-surface focus:outline-none focus:border-primary">
+<option selected="">Español (Latinoamérica)</option>
+<option>English (US)</option>
+<option>Português (Brasil)</option>
+</select>
+</div>
+<div class="space-y-2">
+<label class="text-body-sm font-headline-md text-on-surface-variant">Formato de Fecha y Hora</label>
+<select class="w-full bg-white border border-slate-200 rounded-lg px-4 py-2.5 text-body-md text-on-surface focus:outline-none focus:border-primary">
+<option>DD/MM/YYYY - 24 horas</option>
+<option>MM/DD/YYYY - 12 horas (AM/PM)</option>
+</select>
+</div>
+</div>
+</div>
+<div class="bg-white border border-slate-200 rounded-xl p-unit-lg shadow-sm space-y-6">
+<h3 class="text-headline-md font-headline-md text-on-surface pb-2 border-b border-slate-200">Notificaciones por Canal</h3>
+<div class="space-y-4">
+<div class="flex items-center justify-between p-3 bg-white border border-slate-200 rounded-xl">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary">mail</span>
+<div>
+<p class="font-headline-md text-on-surface">Correo Electrónico</p>
+<p class="text-body-sm text-on-surface-variant">Resúmenes semanales de ejecuciones y alertas de cuota críticas.</p>
+</div>
+</div>
+<input checked="" class="w-5 h-5 accent-primary rounded cursor-pointer" type="checkbox">
+</div>
+<div class="flex items-center justify-between p-3 bg-white border border-slate-200 rounded-xl">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary">chat</span>
+<div>
+<p class="font-headline-md text-on-surface">Webhooks / Slack</p>
+<p class="text-body-sm text-on-surface-variant">Alertas en tiempo real para flujos de trabajo fallidos o completados.</p>
+</div>
+</div>
+<input checked="" class="w-5 h-5 accent-primary rounded cursor-pointer" type="checkbox">
+</div>
+<div class="flex items-center justify-between p-3 bg-white border border-slate-200 rounded-xl">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary">notifications_active</span>
+<div>
+<p class="font-headline-md text-on-surface">Notificaciones Push en Navegador</p>
+<p class="text-body-sm text-on-surface-variant">Avisos instantáneos al finalizar tareas largas en segundo plano.</p>
+</div>
+</div>
+<input class="w-5 h-5 accent-primary rounded cursor-pointer" type="checkbox">
+</div>
+</div>
+</div>
+</section>
+<!-- TAB 3: CONFIGURACIÓN DE IA -->
+<section class="tab-content hidden space-y-6" id="content-ia">
+<div class="bg-white border border-slate-200 rounded-xl p-unit-lg shadow-sm space-y-6">
+<h3 class="text-headline-md font-headline-md text-on-surface pb-2 border-b border-slate-200">Modelo y Proveedor Predeterminado</h3>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div class="space-y-2">
+<label class="text-body-sm font-headline-md text-on-surface-variant">Proveedor de IA Preferido</label>
+<select class="w-full bg-white border border-slate-200 rounded-lg px-4 py-2.5 text-body-md text-on-surface focus:outline-none focus:border-primary">
+<option selected="">OpenAI</option>
+<option>Anthropic</option>
+<option>Google Gemini</option>
+<option>Groq (Open Source)</option>
+</select>
+</div>
+<div class="space-y-2">
+<label class="text-body-sm font-headline-md text-on-surface-variant">Modelo Predeterminado</label>
+<select class="w-full bg-white border border-slate-200 rounded-lg px-4 py-2.5 text-body-md text-on-surface focus:outline-none focus:border-primary">
+<option selected="">gpt-4o (OpenAI)</option>
+<option>gpt-4o-mini (OpenAI)</option>
+<option>claude-3-5-sonnet (Anthropic)</option>
+<option>gemini-1.5-pro (Google)</option>
+</select>
+</div>
+</div>
+</div>
+<div class="bg-white border border-slate-200 rounded-xl p-unit-lg shadow-sm space-y-6">
+<h3 class="text-headline-md font-headline-md text-on-surface pb-2 border-b border-slate-200">Llaves de API (API Keys)</h3>
+<p class="text-body-md text-on-surface-variant">Configura tus credenciales seguras para interactuar directamente con los proveedores de LLM.</p>
+<div class="space-y-4">
+<!-- OpenAI Key -->
+<div class="p-4 bg-white border border-slate-200 rounded-xl space-y-3">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary">key</span>
+<span class="font-headline-md text-on-surface">OpenAI API Key</span>
+</div>
+<span class="bg-node-input/10 text-node-input text-label-caps px-2 py-0.5 rounded-full">Conectado</span>
+</div>
+<div class="flex gap-3">
+<input class="flex-1 bg-white border border-slate-200 rounded-lg px-4 py-2 font-mono-code text-on-surface" type="password" value="sk-proj-998234879203478923048792348">
+<button class="bg-white border border-slate-200 hover:bg-slate-50 text-on-surface px-4 py-2 rounded-lg text-body-sm font-headline-md transition-colors">Cambiar</button>
+</div>
+</div>
+<!-- Anthropic Key -->
+<div class="p-4 bg-white border border-slate-200 rounded-xl space-y-3">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary">key</span>
+<span class="font-headline-md text-on-surface">Anthropic API Key</span>
+</div>
+<span class="bg-node-input/10 text-node-input text-label-caps px-2 py-0.5 rounded-full">Conectado</span>
+</div>
+<div class="flex gap-3">
+<input class="flex-1 bg-white border border-slate-200 rounded-lg px-4 py-2 font-mono-code text-on-surface" type="password" value="ant-api03-879123847918237498127348917">
+<button class="bg-white border border-slate-200 hover:bg-slate-50 text-on-surface px-4 py-2 rounded-lg text-body-sm font-headline-md transition-colors">Cambiar</button>
+</div>
+</div>
+<!-- Google Gemini Key -->
+<div class="p-4 bg-white border border-slate-200 rounded-xl space-y-3">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-on-surface-variant">key</span>
+<span class="font-headline-md text-on-surface">Google Gemini API Key</span>
+</div>
+<span class="bg-slate-100 text-on-surface-variant text-label-caps px-2 py-0.5 rounded-full">No configurado</span>
+</div>
+<div class="flex gap-3">
+<input class="flex-1 bg-white border border-slate-200 rounded-lg px-4 py-2 font-mono-code text-on-surface" placeholder="AIzaSy..." type="password">
+<button class="bg-primary hover:bg-primary-container text-white px-4 py-2 rounded-lg text-body-sm font-headline-md transition-colors">Vincular</button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- TAB 4: CUOTAS -->
+<section class="tab-content hidden space-y-6" id="content-cuotas">
+<!-- Quota Overview Card -->
+<div class="bg-white border border-slate-200 rounded-xl p-unit-lg shadow-sm space-y-6">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+<div>
+<h3 class="text-headline-md font-headline-md text-on-surface">Estado de Cuota Mensual</h3>
+<p class="text-body-md text-on-surface-variant">Ciclo de facturación actual: del 1 al 31 del mes.</p>
+</div>
+<span class="bg-node-input/10 text-node-input px-3 py-1 rounded-full text-label-caps font-label-caps self-start">41% Consumido</span>
+</div>
+<div class="space-y-2">
+<div class="flex justify-between text-body-md font-headline-md">
+<span class="text-on-surface">$8.40 consumidos</span>
+<span class="text-on-surface-variant">Límite: $20.00</span>
+</div>
+<div class="h-3 w-full bg-slate-100 rounded-full overflow-hidden">
+<div class="h-full bg-primary rounded-full transition-all duration-500" style="width: 41%"></div>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-4 pt-4 border-t border-slate-200">
+<div class="p-4 bg-white border border-slate-200 rounded-xl">
+<p class="text-body-sm text-on-surface-variant">Tokens Procesados</p>
+<p class="text-headline-lg font-headline-lg text-on-surface mt-1">1.24M</p>
+</div>
+<div class="p-4 bg-white border border-slate-200 rounded-xl">
+<p class="text-body-sm text-on-surface-variant">Ejecuciones de Workflow</p>
+<p class="text-headline-lg font-headline-lg text-on-surface mt-1">348</p>
+</div>
+<div class="p-4 bg-white border border-slate-200 rounded-xl">
+<p class="text-body-sm text-on-surface-variant">Costo Promedio / Ejecución</p>
+<p class="text-headline-lg font-headline-lg text-on-surface mt-1">$0.024</p>
+</div>
+</div>
+</div>
+<!-- Quota Limits & Alerts Configuration -->
+<div class="bg-white border border-slate-200 rounded-xl p-unit-lg shadow-sm space-y-6">
+<h3 class="text-headline-md font-headline-md text-on-surface pb-2 border-b border-slate-200">Límites y Alertas de Consumo</h3>
+<div class="space-y-6">
+<div class="space-y-2">
+<label class="text-body-sm font-headline-md text-on-surface-variant">Límite Mensual de Presupuesto ($ USD)</label>
+<input class="w-full md:w-1/2 bg-white border border-slate-200 rounded-lg px-4 py-2.5 text-body-md text-on-surface focus:outline-none focus:border-primary" type="number" value="20.00">
+</div>
+<div class="space-y-4 pt-2">
+<p class="text-body-sm font-headline-md text-on-surface">Umbrales de Notificación de Alerta</p>
+<div class="flex items-center justify-between p-3 bg-white border border-slate-200 rounded-xl">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary">warning</span>
+<div>
+<p class="font-headline-md text-on-surface">Alerta al alcanzar el 80%</p>
+<p class="text-body-sm text-on-surface-variant">Envía un correo de advertencia al superar los $16.00 consumidos.</p>
+</div>
+</div>
+<input checked="" class="w-5 h-5 accent-primary rounded cursor-pointer" type="checkbox">
+</div>
+<div class="flex items-center justify-between p-3 bg-white border border-slate-200 rounded-xl">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary">warning</span>
+<div>
+<p class="font-headline-md text-on-surface">Alerta al alcanzar el 95%</p>
+<p class="text-body-sm text-on-surface-variant">Notificación urgente por Webhook y correo al alcanzar $19.00.</p>
+</div>
+</div>
+<input checked="" class="w-5 h-5 accent-primary rounded cursor-pointer" type="checkbox">
+</div>
+<div class="flex items-center justify-between p-3 bg-white border border-slate-200 rounded-xl">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-error">block</span>
+<div>
+<p class="font-headline-md text-on-surface">Bloqueo estricto (Hard Cap al 100%)</p>
+<p class="text-body-sm text-on-surface-variant">Pausa automática de ejecuciones de IA al llegar exactamente a $20.00.</p>
+</div>
+</div>
+<input checked="" class="w-5 h-5 accent-primary rounded cursor-pointer" type="checkbox">
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- TAB 5: SEGURIDAD -->
+<section class="tab-content hidden space-y-6" id="content-seguridad">
+<!-- 2FA Authentication Card -->
+<div class="bg-white border border-slate-200 rounded-xl p-unit-lg shadow-sm flex items-center justify-between gap-6">
+<div class="space-y-1">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-node-input">verified_user</span>
+<h3 class="text-headline-md font-headline-md text-on-surface">Autenticación de Dos Factores (2FA)</h3>
+</div>
+<p class="text-body-md text-on-surface-variant">Protege tu cuenta agregando una capa adicional de seguridad usando Google Authenticator o Authy.</p>
+</div>
+<button class="bg-node-input text-white px-4 py-2 rounded-lg text-body-sm font-headline-md shadow-sm hover:opacity-90 transition-opacity whitespace-nowrap">2FA Activado</button>
+</div>
+<!-- Active Sessions -->
+<div class="bg-white border border-slate-200 rounded-xl p-unit-lg shadow-sm space-y-6">
+<div class="flex items-center justify-between">
+<div>
+<h3 class="text-headline-md font-headline-md text-on-surface">Sesiones Activas</h3>
+<p class="text-body-md text-on-surface-variant">Dispositivos con acceso actual a tu cuenta de PromptFlow.</p>
+</div>
+<button class="text-error text-body-sm font-headline-md hover:underline">Cerrar todas las demás sesiones</button>
+</div>
+<div class="space-y-3">
+<div class="flex items-center justify-between p-4 bg-white border border-slate-200 rounded-xl">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-[28px] text-primary">laptop_mac</span>
+<div>
+<p class="font-headline-md text-on-surface">MacBook Pro • macOS Sonoma</p>
+<p class="text-body-sm text-on-surface-variant">Bogotá, Colombia • <span class="text-node-input font-headline-md">Sesión actual</span></p>
+</div>
+</div>
+<span class="text-body-sm text-on-surface-variant">IP: 181.54.20.12</span>
+</div>
+<div class="flex items-center justify-between p-4 bg-white border border-slate-200 rounded-xl">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-[28px] text-on-surface-variant">phone_iphone</span>
+<div>
+<p class="font-headline-md text-on-surface">iPhone 15 Pro • iOS 17</p>
+<p class="text-body-sm text-on-surface-variant">Bogotá, Colombia • Última actividad hace 2 horas</p>
+</div>
+</div>
+<button class="bg-white border border-slate-200 hover:bg-slate-50 text-on-surface px-3 py-1.5 rounded-lg text-body-sm font-headline-md transition-colors">Revocar</button>
+</div>
+</div>
+</div>
+<!-- Role Permissions Overview -->
+<div class="bg-white border border-slate-200 rounded-xl p-unit-lg shadow-sm space-y-4">
+<h3 class="text-headline-md font-headline-md text-on-surface">Permisos y Permisiones de Rol</h3>
+<p class="text-body-md text-on-surface-variant">Tu rol actual cuenta con los siguientes privilegios asignados por el sistema:</p>
+<div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3 pt-2">
+<div class="p-3 bg-white border border-slate-200 rounded-xl flex items-center gap-3">
+<span class="material-symbols-outlined text-node-input">check_circle</span>
+<span class="text-body-md text-on-surface font-headline-md">Ejecución de Workflows</span>
+</div>
+<div class="p-3 bg-white border border-slate-200 rounded-xl flex items-center gap-3">
+<span class="material-symbols-outlined text-node-input">check_circle</span>
+<span class="text-body-md text-on-surface font-headline-md">Edición de Prompts</span>
+</div>
+<div class="p-3 bg-white border border-slate-200 rounded-xl flex items-center gap-3">
+<span class="material-symbols-outlined text-node-input">check_circle</span>
+<span class="text-body-md text-on-surface font-headline-md">Gestión de API Keys</span>
+</div>
+<div class="p-3 bg-white border border-slate-200 rounded-xl flex items-center gap-3">
+<span class="material-symbols-outlined text-node-input">check_circle</span>
+<span class="text-body-md text-on-surface font-headline-md">Modificación de Cuotas</span>
+</div>
+<div class="p-3 bg-white border border-slate-200 rounded-xl flex items-center gap-3">
+<span class="material-symbols-outlined text-node-input">check_circle</span>
+<span class="text-body-md text-on-surface font-headline-md">Exportación de Reportes</span>
+</div>
+<div class="p-3 bg-white border border-slate-200 rounded-xl flex items-center gap-3">
+<span class="material-symbols-outlined text-node-input">check_circle</span>
+<span class="text-body-md text-on-surface font-headline-md">Control de Usuarios Lab</span>
+</div>
+</div>
+</div>
+</section>
+</div>
+</div>
+<script>
+  function switchTab(tabId) {
+    // Hide all contents
+    const contents = document.querySelectorAll('.tab-content');
+    contents.forEach(el => el.classList.add('hidden'));
+
+    // Remove active styles from all tabs
+    const tabs = document.querySelectorAll('.tab-btn');
+    tabs.forEach(el => {
+      el.classList.remove('text-primary');
+      el.classList.add('text-on-surface-variant');
+      const indicator = el.querySelector('div');
+      if (indicator) indicator.remove();
+    });
+
+    // Show target content
+    const targetContent = document.getElementById('content-' + tabId);
+    if (targetContent) targetContent.classList.remove('hidden');
+
+    // Activate target tab
+    const targetTab = document.getElementById('tab-' + tabId);
+    if (targetTab) {
+      targetTab.classList.remove('text-on-surface-variant');
+      targetTab.classList.add('text-primary');
+      const indicator = document.createElement('div');
+      indicator.className = 'absolute bottom-0 left-0 right-0 h-0.5 bg-primary rounded-full';
+      targetTab.appendChild(indicator);
+    }
+  }
+</script></main></div>
+
+
+</body></html>

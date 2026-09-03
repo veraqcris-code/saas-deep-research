@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={theme:{extend:{"colors":{"surface-tint":"#4d44e3","on-primary-fixed":"#0f0069","surface-dim":"#dcd8e5","node-prompt":"#4F46E5","tertiary-fixed":"#ffdbcc","inverse-primary":"#c3c0ff","on-tertiary-container":"#ffd2be","on-tertiary-fixed-variant":"#7b2f00","node-output":"#E11D48","on-secondary-fixed":"#131b2e","tertiary":"#7e3000","sidebar-navy":"#0F172A","on-tertiary-fixed":"#351000","surface-variant":"#e4e1ee","inverse-on-surface":"#f3effc","canvas-grid":"#E2E8F0","on-primary-fixed-variant":"#3323cc","surface-container":"#f0ecf9","node-logic":"#F59E0B","on-surface":"#1b1b24","inverse-surface":"#302f39","node-input":"#10B981","secondary-fixed-dim":"#bec6e0","node-search":"#A855F7","on-secondary-container":"#5c647a","primary-container":"#4f46e5","surface-container-high":"#eae6f4","primary-fixed-dim":"#c3c0ff","tertiary-fixed-dim":"#ffb695","secondary-fixed":"#dae2fd","surface-bright":"#fcf8ff","error-container":"#ffdad6","on-secondary":"#ffffff","background":"#fcf8ff","primary-fixed":"#e2dfff","surface-container-low":"#f5f2ff","outline-variant":"#c7c4d8","on-primary":"#ffffff","surface":"#fcf8ff","on-secondary-fixed-variant":"#3f465c","on-surface-variant":"#464555","slate-background":"#F8FAFC","on-error-container":"#93000a","secondary-container":"#dae2fd","on-tertiary":"#ffffff","surface-container-lowest":"#ffffff","primary":"#3525cd","on-error":"#ffffff","on-background":"#1b1b24","outline":"#777587","tertiary-container":"#a44100","surface-container-highest":"#e4e1ee","secondary":"#565e74","on-primary-container":"#dad7ff","error":"#ba1a1a"},"borderRadius":{"DEFAULT":"0.25rem","lg":"0.5rem","xl":"0.75rem","full":"9999px"},"spacing":{"unit-md":"16px","node-gap":"32px","unit-sm":"8px","container-margin":"24px","sidebar-width":"240px","inspector-width":"360px","gutter":"16px","unit-lg":"24px","unit-xs":"4px"},"fontFamily":{"label-caps":["Inter"],"headline-md":["Inter"],"mono-code":["monospace"],"headline-xl":["Inter"],"body-sm":["Inter"],"body-lg":["Inter"],"headline-lg":["Inter"],"body-md":["Inter"]},"fontSize":{"label-caps":["11px",{"lineHeight":"16px","letterSpacing":"0.05em","fontWeight":"600"}],"headline-md":["18px",{"lineHeight":"28px","fontWeight":"600"}],"mono-code":["13px",{"lineHeight":"18px","fontWeight":"400"}],"headline-xl":["36px",{"lineHeight":"44px","letterSpacing":"-0.02em","fontWeight":"700"}],"body-sm":["12px",{"lineHeight":"16px","fontWeight":"400"}],"body-lg":["16px",{"lineHeight":"24px","fontWeight":"400"}],"headline-lg":["24px",{"lineHeight":"32px","letterSpacing":"-0.01em","fontWeight":"600"}],"body-md":["14px",{"lineHeight":"20px","fontWeight":"400"}]}}}}</script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&amp;display=swap" rel="stylesheet"/></head><body class="bg-slate-background font-body-md text-on-surface"><aside class="fixed left-0 top-0 h-full w-sidebar-width bg-sidebar-navy z-50 flex flex-col shadow-xl"><div class="p-unit-lg flex items-center gap-3 border-b border-white/5"><img alt="Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1XwSgcaB06WocgwVPR74TfCoTnG3J17_q6igMYCfxuYpErkpaCn0d2KlnxGxgssAVw8eVRkyt424bCcugV-glPq7KTWJFreonDKHN5xbKQWB5DDiFJorJqyPzFQ9T3Kq-yQLrqf8a4yZkrFmID0TYKEmaJ_jTTfu8nlEvS4-wfXl8u_dyYVQRyDO-d2xU6uSjUkQijJPo4RixMECjxVmeZRpYtzEd3b72pMN8cQUIqC0c3pici2vKyTySp1"/><span class="text-white font-headline-md text-headline-md tracking-tight">PromptFlow</span></div><nav class="flex-1 py-unit-md px-unit-sm space-y-1 overflow-y-auto" data-active-classes="bg-primary text-white"><a class="flex items-center px-unit-md py-2.5 rounded-lg text-white/60 hover:text-white hover:bg-white/5 transition-all group" data-path="inicio" href="#"><span class="material-symbols-outlined mr-3 text-[20px]">home</span><span class="text-body-md font-body-md">Inicio</span></a><a class="flex items-center px-unit-md py-2.5 rounded-lg text-white/60 hover:text-white hover:bg-white/5 transition-all" data-path="investigaciones" href="#"><span class="material-symbols-outlined mr-3 text-[20px]">science</span><span class="text-body-md font-body-md">Investigaciones</span></a><a class="flex items-center px-unit-md py-2.5 rounded-lg text-white/60 hover:text-white hover:bg-white/5 transition-all" data-path="workflows" href="#"><span class="material-symbols-outlined mr-3 text-[20px]">account_tree</span><span class="text-body-md font-body-md">Workflows</span></a><a class="flex items-center px-unit-md py-2.5 rounded-lg text-white/60 hover:text-white hover:bg-white/5 transition-all" data-path="prompts" href="#"><span class="material-symbols-outlined mr-3 text-[20px]">terminal</span><span class="text-body-md font-body-md">Prompts</span></a><a class="flex items-center px-unit-md py-2.5 rounded-lg text-white/60 hover:text-white hover:bg-white/5 transition-all" data-path="plantillas" href="#"><span class="material-symbols-outlined mr-3 text-[20px]">dashboard_customize</span><span class="text-body-md font-body-md">Plantillas</span></a><a class="flex items-center px-unit-md py-2.5 rounded-lg text-white/60 hover:text-white hover:bg-white/5 transition-all" data-path="modelos-de-ia" href="#"><span class="material-symbols-outlined mr-3 text-[20px]">smart_toy</span><span class="text-body-md font-body-md">Modelos de IA</span></a><a aria-current="page" class="flex items-center px-unit-md py-2.5 rounded-lg transition-all bg-primary text-white" data-path="ejecuciones" href="#"><span class="material-symbols-outlined mr-3 text-[20px]">play_circle</span><span class="text-body-md font-body-md">Ejecuciones</span></a><a class="flex items-center px-unit-md py-2.5 rounded-lg text-white/60 hover:text-white hover:bg-white/5 transition-all" data-path="historial-de-costos" href="#"><span class="material-symbols-outlined mr-3 text-[20px]">payments</span><span class="text-body-md font-body-md">Historial de Costos</span></a><a class="flex items-center px-unit-md py-2.5 rounded-lg text-white/60 hover:text-white hover:bg-white/5 transition-all" data-path="documentos" href="#"><span class="material-symbols-outlined mr-3 text-[20px]">description</span><span class="text-body-md font-body-md">Documentos</span></a><a class="flex items-center px-unit-md py-2.5 rounded-lg text-white/60 hover:text-white hover:bg-white/5 transition-all" data-path="ajustes" href="#"><span class="material-symbols-outlined mr-3 text-[20px]">settings</span><span class="text-body-md font-body-md">Ajustes</span></a></nav><div class="px-unit-md pb-unit-lg space-y-4"><div class="bg-[#111c30] p-4 rounded-xl space-y-3 shadow-sm border border-white/10"><div class="text-slate-400 text-label-caps font-label-caps uppercase tracking-wider">CUOTA ACTUAL</div><div class="flex items-end justify-between"><div class="flex items-baseline gap-1"><span class="text-white text-headline-lg font-headline-lg tracking-tight">$8.40</span><span class="text-slate-400 text-body-md">/ $20.00</span></div><span class="text-white font-headline-md text-body-md">41%</span></div><div class="h-1.5 w-full bg-slate-800 rounded-full overflow-hidden"><div class="h-full bg-emerald-500 rounded-full" style="width: 41%"></div></div><p class="text-slate-400 text-body-sm font-body-sm">Renueva el 01/06/2025</p><button class="w-full bg-[#1b2a47] hover:bg-slate-700 text-white text-body-sm font-headline-md py-2 rounded-lg transition-colors border border-slate-700/50 mt-2">Ver detalles</button></div><div class="flex items-center gap-3 pt-4 border-t border-white/10"><img alt="Profile" class="w-9 h-9 rounded-full object-cover border border-white/20" src="https://lh3.googleusercontent.com/aida/AEtjO1WP6GPazsIKzYAU_cAXS_UMiMdEn-YRAQOh55dhEK_tMLLasef3zlbeR66jFD4-mWWPabjfPLs3VW5l1pKlW6uRGcGUUjzXi85cUuO-QTdTga6fVdaPcc5O8PBc_edHraEZnDILuukniqrUBJMCS0M6oM038K_tcimtz1bnSkfhQpBQt1YRyVp111vMd4520Mw3csb8VwgisoWZ5SuqXf3Qab0iGauw2f6a9VYZtoM7FW1GAOSHZmSQ2fG8"/><div class="flex-1 min-w-0"><p class="text-white text-body-sm font-headline-md truncate">Investigador Senior</p><p class="text-white/40 text-[10px] truncate">Lab Alpha-9</p></div><span class="material-symbols-outlined text-white/40 text-sm">unfold_more</span></div></div></aside><div class="pl-sidebar-width"><header class="fixed top-0 left-sidebar-width right-0 h-16 bg-white border-b border-outline-variant/20 shadow-[0_1px_8px_rgba(0,0,0,0.02)] z-40 flex items-center justify-end px-unit-lg gap-6"><div class="flex items-center gap-6"><span class="material-symbols-outlined text-on-surface-variant cursor-pointer hover:text-primary transition-colors">notifications</span><div class="h-6 w-[1px] bg-outline-variant/40"></div><div class="flex items-center gap-3 cursor-pointer"><img alt="Profile" class="w-9 h-9 rounded-full object-cover border border-outline-variant/30" src="https://lh3.googleusercontent.com/aida/AEtjO1WP6GPazsIKzYAU_cAXS_UMiMdEn-YRAQOh55dhEK_tMLLasef3zlbeR66jFD4-mWWPabjfPLs3VW5l1pKlW6uRGcGUUjzXi85cUuO-QTdTga6fVdaPcc5O8PBc_edHraEZnDILuukniqrUBJMCS0M6oM038K_tcimtz1bnSkfhQpBQt1YRyVp111vMd4520Mw3csb8VwgisoWZ5SuqXf3Qab0iGauw2f6a9VYZtoM7FW1GAOSHZmSQ2fG8"/></div></div></header><main class="relative pt-16 min-h-screen"><div class="flex flex-col w-full p-unit-lg gap-unit-lg">
+<div class="flex justify-between items-center bg-white border border-outline-variant/20 rounded-xl p-unit-md shadow-sm relative overflow-hidden"><div class="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-transparent"></div><div class="relative z-10 flex flex-col gap-3 flex-1"><div class="flex flex-col gap-1"><h1 class="text-headline-xl font-headline-xl text-on-surface">Monitor de Ejecuciones</h1><p class="text-body-md font-body-md text-on-surface-variant">Monitoreo en tiempo real de flujos de trabajo.</p></div><div class="flex items-center gap-3 max-w-md bg-slate-50 px-4 py-2 rounded-lg border border-outline-variant/30"><span class="material-symbols-outlined text-sm opacity-60 text-on-surface-variant">search</span><input class="bg-transparent border-none outline-none w-full text-sm placeholder-on-surface-variant/60 text-on-surface" placeholder="Buscar ejecuciones o modelos..." type="text"/></div></div><div class="relative z-10 flex gap-unit-sm items-center"><button class="bg-primary text-on-primary px-unit-md py-2 rounded-lg text-body-sm font-headline-md shadow-md hover:-translate-y-0.5 transition-transform">Nueva Ejecución</button><button class="bg-white border border-outline-variant/30 text-on-surface px-unit-md py-2 rounded-lg text-body-sm font-headline-md shadow-sm hover:bg-slate-50 transition-colors">Actualizar</button></div></div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-unit-md">
+<div class="bg-white border border-outline-variant/20 rounded-xl p-unit-md flex flex-col justify-between shadow-sm relative group overflow-hidden">
+<div class="absolute inset-0 bg-primary/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+<div class="flex justify-between items-start mb-4 relative z-10">
+<span class="text-label-caps font-label-caps text-on-surface-variant uppercase tracking-wider">Ejecuciones Activas</span>
+<span class="material-symbols-outlined text-primary text-[20px]">play_circle</span>
+</div>
+<div class="flex items-end justify-between relative z-10">
+<span class="text-headline-xl font-headline-xl text-on-surface">24</span>
+</div>
+</div>
+<div class="bg-white border border-outline-variant/20 rounded-xl p-unit-md flex flex-col justify-between shadow-sm relative group overflow-hidden">
+<div class="absolute inset-0 bg-primary/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+<div class="flex justify-between items-start mb-4 relative z-10">
+<span class="text-label-caps font-label-caps text-on-surface-variant uppercase tracking-wider">Tasa de Éxito (24h)</span>
+<span class="material-symbols-outlined text-emerald-500 text-[20px]">check_circle</span>
+</div>
+<div class="flex flex-col relative z-10">
+<span class="text-headline-xl font-headline-xl text-on-surface">98.5%</span>
+<div class="w-full bg-outline-variant/30 h-1 mt-2 rounded-full overflow-hidden">
+<div class="bg-emerald-500 h-full rounded-full" style="width: 98.5%"></div>
+</div>
+</div>
+</div>
+<div class="bg-white border border-outline-variant/20 rounded-xl p-unit-md flex flex-col justify-between shadow-sm relative group overflow-hidden">
+<div class="absolute inset-0 bg-primary/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+<div class="flex justify-between items-start mb-4 relative z-10">
+<span class="text-label-caps font-label-caps text-on-surface-variant uppercase tracking-wider">Tokens Consumidos Hoy</span>
+<span class="material-symbols-outlined text-primary text-[20px]">data_usage</span>
+</div>
+<div class="flex flex-col relative z-10">
+<span class="text-headline-xl font-headline-xl text-on-surface">142K</span>
+<span class="text-body-sm font-body-sm text-on-surface-variant mt-1">~$2.84 USD est.</span>
+</div>
+</div>
+</div>
+<div class="flex flex-col gap-unit-sm mt-unit-sm">
+<h2 class="text-headline-lg font-headline-lg text-on-surface mb-2">Actividad Reciente</h2>
+<div class="flex flex-col gap-3">
+<!-- Item 1 -->
+<div class="bg-white border border-outline-variant/20 rounded-xl p-unit-md flex items-center justify-between shadow-sm hover:shadow-md transition-shadow cursor-pointer relative overflow-hidden group">
+<div class="absolute left-0 top-0 bottom-0 w-1 bg-emerald-500"></div>
+<div class="flex items-center gap-4 flex-1">
+<div class="w-10 h-10 rounded-full bg-emerald-500/10 flex items-center justify-center">
+<span class="material-symbols-outlined text-emerald-500 text-[20px]">done</span>
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-2">
+<span class="text-body-sm font-mono-code text-on-surface-variant">#001</span>
+<span class="text-body-lg font-headline-md text-on-surface truncate">Investigación IA Educación</span>
+</div>
+<div class="flex items-center gap-3 mt-1 text-body-sm font-body-sm text-on-surface-variant">
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-[14px]">smart_toy</span> GPT-4o</span>
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-[14px]">timer</span> 45s</span>
+</div>
+</div>
+</div>
+<div class="flex flex-col items-end gap-1">
+<div class="bg-emerald-500/20 text-emerald-700 px-2 py-0.5 rounded text-[10px] font-label-caps uppercase">Completada</div>
+<div class="flex items-center gap-4 text-body-sm font-body-sm text-on-surface-variant">
+<span class="">5,570 tkns</span>
+<span class="font-mono-code">$0.08 USD</span>
+</div>
+</div>
+</div>
+<!-- Item 2 -->
+<div class="bg-white border border-outline-variant/20 rounded-xl p-unit-md flex items-center justify-between shadow-sm hover:shadow-md transition-shadow cursor-pointer relative overflow-hidden group">
+<div class="absolute left-0 top-0 bottom-0 w-1 bg-emerald-500"></div>
+<div class="flex items-center gap-4 flex-1">
+<div class="w-10 h-10 rounded-full bg-emerald-500/10 flex items-center justify-center">
+<span class="material-symbols-outlined text-emerald-500 text-[20px]">done</span>
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-2">
+<span class="text-body-sm font-mono-code text-on-surface-variant">#002</span>
+<span class="text-body-lg font-headline-md text-on-surface truncate">Investigación IA LATAM</span>
+</div>
+<div class="flex items-center gap-3 mt-1 text-body-sm font-body-sm text-on-surface-variant">
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-[14px]">smart_toy</span> Claude 3.5</span>
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-[14px]">timer</span> 1m 12s</span>
+</div>
+</div>
+</div>
+<div class="flex flex-col items-end gap-1">
+<div class="bg-emerald-500/20 text-emerald-700 px-2 py-0.5 rounded text-[10px] font-label-caps uppercase">Completada</div>
+<div class="flex items-center gap-4 text-body-sm font-body-sm text-on-surface-variant">
+<span class="">7,210 tkns</span>
+<span class="font-mono-code">$0.11 USD</span>
+</div>
+</div>
+</div>
+<!-- Item 3 -->
+<div class="bg-white border border-outline-variant/20 rounded-xl p-unit-md flex items-center justify-between shadow-sm hover:shadow-md transition-shadow cursor-pointer relative overflow-hidden group">
+<div class="absolute left-0 top-0 bottom-0 w-1 bg-slate-500"></div>
+<div class="flex items-center gap-4 flex-1">
+<div class="w-10 h-10 rounded-full bg-slate-500/10 flex items-center justify-center">
+<span class="material-symbols-outlined text-slate-500 text-[20px]">error</span>
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-2">
+<span class="text-body-sm font-mono-code text-on-surface-variant">#003</span>
+<span class="text-body-lg font-headline-md text-on-surface truncate">Análisis NLP Médico</span>
+</div>
+<div class="flex items-center gap-3 mt-1 text-body-sm font-body-sm text-on-surface-variant">
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-[14px]">smart_toy</span> GPT-4o</span>
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-[14px]">timer</span> 15s</span>
+</div>
+</div>
+</div>
+<div class="flex flex-col items-end gap-1">
+<div class="bg-slate-500/20 text-slate-700 px-2 py-0.5 rounded text-[10px] font-label-caps uppercase">Error (Limit)</div>
+<div class="flex items-center gap-4 text-body-sm font-body-sm text-on-surface-variant">
+<span class="">2,100 tkns</span>
+<span class="font-mono-code">$0.03 USD</span>
+</div>
+</div>
+</div>
+<!-- Item 4 (Active/Animated) -->
+<div class="rounded-xl p-unit-md flex items-center justify-between shadow-sm hover:shadow-md transition-shadow cursor-pointer relative overflow-hidden group bg-white border border-outline-variant/30">
+<div class="absolute left-0 top-0 bottom-0 w-1 bg-primary"></div>
+<div class="flex items-center gap-4 flex-1">
+<div class="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center relative">
+<span class="material-symbols-outlined text-primary text-[20px] animate-pulse">sync</span>
+<div class="absolute inset-0 rounded-full border-2 border-primary border-t-transparent animate-spin opacity-50"></div>
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-2">
+<span class="text-body-sm font-mono-code text-on-surface-variant">#004</span>
+<span class="text-body-lg font-headline-md text-on-surface truncate">Generación de Reporte Financiero Q3</span>
+</div>
+<div class="flex items-center gap-3 mt-1 text-body-sm font-body-sm text-on-surface-variant">
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-[14px]">smart_toy</span> Claude 3.5</span>
+<span class="flex items-center gap-1 text-primary font-mono-code">00:24s</span>
+</div>
+</div>
+</div>
+<div class="flex flex-col items-end gap-1">
+<div class="bg-primary/20 text-primary px-2 py-0.5 rounded text-[10px] font-label-caps uppercase animate-pulse">En Progreso</div>
+<div class="flex items-center gap-4 text-body-sm font-body-sm text-on-surface-variant opacity-50">
+<span class="">-- tkns</span>
+<span class="font-mono-code">-- USD</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div></main></div>
+</body></html>

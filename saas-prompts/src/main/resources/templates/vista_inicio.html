@@ -1,0 +1,382 @@
+<!DOCTYPE html><html lang="en" style=""><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<style>
+  @layer base { html, body { margin: 0; padding: 0; } body { overscroll-behavior: none; } main>:first-child { margin-top: 0!important; } main>:last-child { margin-bottom: 0!important; } }
+  ::-webkit-scrollbar { display: none; }
+</style>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+  tailwind.config = {
+    darkMode: "class",
+    theme: {
+      extend: {
+        "colors": {
+                "on-tertiary-container": "#ffd2be",
+                "secondary-fixed": "#dae2fd",
+                "inverse-surface": "#302f39",
+                "tertiary": "#7e3000",
+                "on-surface-variant": "#464555",
+                "on-primary-fixed-variant": "#3323cc",
+                "surface-variant": "#e4e1ee",
+                "surface-bright": "#fcf8ff",
+                "on-error": "#ffffff",
+                "on-error-container": "#93000a",
+                "primary-fixed-dim": "#c3c0ff",
+                "sidebar-navy": "#0F172A",
+                "inverse-primary": "#c3c0ff",
+                "on-tertiary": "#ffffff",
+                "on-secondary": "#ffffff",
+                "secondary-container": "#dae2fd",
+                "node-prompt": "#4F46E5",
+                "node-search": "#A855F7",
+                "surface-container": "#f0ecf9",
+                "on-primary-fixed": "#0f0069",
+                "on-primary-container": "#dad7ff",
+                "on-secondary-container": "#5c647a",
+                "primary-container": "#4f46e5",
+                "on-tertiary-fixed-variant": "#7b2f00",
+                "on-primary": "#ffffff",
+                "on-background": "#1b1b24",
+                "on-secondary-fixed": "#131b2e",
+                "secondary-fixed-dim": "#bec6e0",
+                "secondary": "#565e74",
+                "on-tertiary-fixed": "#351000",
+                "node-logic": "#F59E0B",
+                "outline": "#777587",
+                "node-output": "#E11D48",
+                "surface": "#fcf8ff",
+                "outline-variant": "#c7c4d8",
+                "surface-container-highest": "#e4e1ee",
+                "background": "#fcf8ff",
+                "on-surface": "#1b1b24",
+                "tertiary-fixed-dim": "#ffb695",
+                "surface-dim": "#dcd8e5",
+                "slate-background": "#F8FAFC",
+                "node-input": "#10B981",
+                "surface-container-low": "#f5f2ff",
+                "inverse-on-surface": "#f3effc",
+                "primary-fixed": "#e2dfff",
+                "error-container": "#ffdad6",
+                "canvas-grid": "#E2E8F0",
+                "surface-tint": "#4d44e3",
+                "tertiary-container": "#a44100",
+                "surface-container-lowest": "#ffffff",
+                "tertiary-fixed": "#ffdbcc",
+                "surface-container-high": "#eae6f4",
+                "on-secondary-fixed-variant": "#3f465c",
+                "primary": "#3525cd",
+                "error": "#ba1a1a"
+        },
+        "borderRadius": {
+                "DEFAULT": "0.25rem",
+                "lg": "0.5rem",
+                "xl": "0.75rem",
+                "full": "9999px"
+        },
+        "spacing": {
+                "gutter": "16px",
+                "inspector-width": "360px",
+                "node-gap": "32px",
+                "unit-md": "16px",
+                "sidebar-width": "240px",
+                "unit-lg": "24px",
+                "unit-xs": "4px",
+                "container-margin": "24px",
+                "unit-sm": "8px"
+        },
+        "fontFamily": {
+                "headline-lg": ["Inter"],
+                "body-lg": ["Inter"],
+                "body-sm": ["Inter"],
+                "body-md": ["Inter"],
+                "label-caps": ["Inter"],
+                "headline-xl": ["Inter"],
+                "mono-code": ["monospace"],
+                "headline-md": ["Inter"]
+        }
+      }
+    }
+  }
+</script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&amp;display=swap" rel="stylesheet">
+</head>
+<body class="bg-slate-background font-body-md text-on-surface overflow-hidden">
+<!-- Sidebar -->
+<aside class="fixed left-0 top-0 h-full w-sidebar-width bg-sidebar-navy z-50 flex flex-col shadow-xl transition-all duration-300" id="app-sidebar" style="transform: translateX(0px);">
+<div class="p-unit-lg flex items-center gap-3 border-b border-white/5">
+<img alt="Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1XwSgcaB06WocgwVPR74TfCoTnG3J17_q6igMYCfxuYpErkpaCn0d2KlnxGxgssAVw8eVRkyt424bCcugV-glPq7KTWJFreonDKHN5xbKQWB5DDiFJorJqyPzFQ9T3Kq-yQLrqf8a4yZkrFmID0TYKEmaJ_jTTfu8nlEvS4-wfXl8u_dyYVQRyDO-d2xU6uSjUkQijJPo4RixMECjxVmeZRpYtzEd3b72pMN8cQUIqC0c3pici2vKyTySp1">
+<span class="text-white font-headline-md text-headline-md tracking-tight">PromptFlow</span>
+</div>
+<nav class="flex-1 py-unit-md px-unit-sm space-y-1 overflow-y-auto">
+<a class="flex items-center px-unit-md py-2.5 rounded-lg bg-primary text-white transition-all shadow-sm" href="#"><span class="material-symbols-outlined mr-3 text-[20px]">home</span><span class="text-body-md">Inicio</span></a>
+<a class="flex items-center px-unit-md py-2.5 rounded-lg text-white/60 hover:text-white hover:bg-white/5 transition-all" href="#"><span class="material-symbols-outlined mr-3 text-[20px]">science</span><span class="text-body-md">Investigaciones</span></a>
+<a class="flex items-center px-unit-md py-2.5 rounded-lg text-white/60 hover:text-white hover:bg-white/5 transition-all" href="#"><span class="material-symbols-outlined mr-3 text-[20px]">account_tree</span><span class="text-body-md">Workflows</span></a>
+<a class="flex items-center px-unit-md py-2.5 rounded-lg text-white/60 hover:text-white hover:bg-white/5 transition-all" href="#"><span class="material-symbols-outlined mr-3 text-[20px]">terminal</span><span class="text-body-md">Prompts</span></a>
+<a class="flex items-center px-unit-md py-2.5 rounded-lg text-white/60 hover:text-white hover:bg-white/5 transition-all" href="#"><span class="material-symbols-outlined mr-3 text-[20px]">dashboard_customize</span><span class="text-body-md">Plantillas</span></a>
+<a class="flex items-center px-unit-md py-2.5 rounded-lg text-white/60 hover:text-white hover:bg-white/5 transition-all" href="#"><span class="material-symbols-outlined mr-3 text-[20px]">smart_toy</span><span class="text-body-md">Modelos de IA</span></a>
+<a class="flex items-center px-unit-md py-2.5 rounded-lg text-white/60 hover:text-white hover:bg-white/5 transition-all" href="#"><span class="material-symbols-outlined mr-3 text-[20px]">play_circle</span><span class="text-body-md">Ejecuciones</span></a>
+<a class="flex items-center px-unit-md py-2.5 rounded-lg text-white/60 hover:text-white hover:bg-white/5 transition-all" href="#"><span class="material-symbols-outlined mr-3 text-[20px]">payments</span><span class="text-body-md">Historial de Costos</span></a>
+<a class="flex items-center px-unit-md py-2.5 rounded-lg text-white/60 hover:text-white hover:bg-white/5 transition-all" href="#"><span class="material-symbols-outlined mr-3 text-[20px]">description</span><span class="text-body-md">Documentos</span></a>
+<a class="flex items-center px-unit-md py-2.5 rounded-lg text-white/60 hover:text-white hover:bg-white/5 transition-all" href="#"><span class="material-symbols-outlined mr-3 text-[20px]">settings</span><span class="text-body-md">Ajustes</span></a>
+</nav>
+<div class="px-unit-md pb-unit-lg space-y-4">
+<div class="bg-white/10 p-unit-md rounded-xl space-y-3"><div class="flex justify-between text-white/85 text-label-caps font-label-caps"><span class="">CUOTA ACTUAL</span><span class="">41%</span></div><div class="flex items-baseline gap-1"><span class="text-white font-headline-md text-[18px]">$8.40</span><span class="text-white/40 text-body-sm">/ $20.00</span></div><div class="h-1.5 w-full bg-white/10 rounded-full overflow-hidden"><div class="h-full bg-node-input" style="width: 41%"></div></div><div class="flex items-center justify-between pt-1"><p class="text-white/40 text-[10px]">Renueva el 01/06/2025</p><button class="text-[10px] text-white underline hover:text-primary transition-colors">Ver detalles</button></div></div>
+<div class="flex items-center gap-3 pt-4 border-t border-white/10">
+<img alt="Profile" class="w-9 h-9 rounded-full object-cover border border-white/20" src="https://lh3.googleusercontent.com/aida/AEtjO1WP6GPazsIKzYAU_cAXS_UMiMdEn-YRAQOh55dhEK_tMLLasef3zlbeR66jFD4-mWWPabjfPLs3VW5l1pKlW6uRGcGUUjzXi85cUuO-QTdTga6fVdaPcc5O8PBc_edHraEZnDILuukniqrUBJMCS0M6oM038K_tcimtz1bnSkfhQpBQt1YRyVp111vMd4520Mw3csb8VwgisoWZ5SuqXf3Qab0iGauw2f6a9VYZtoM7FW1GAOSHZmSQ2fG8">
+<div class="flex-1 min-w-0"><p class="text-white text-body-sm font-headline-md truncate">Investigador Senior</p><p class="text-white/40 text-[10px] truncate">Lab Alpha-9</p></div>
+</div>
+</div>
+</aside>
+<!-- Main Wrapper -->
+<div class="pl-sidebar-width transition-all duration-300 flex flex-col h-screen">
+<!-- Top Navigation Header -->
+<header class="h-16 bg-white/90 backdrop-blur-md shadow-[0_1px_4px_rgba(0,0,0,0.02)] z-40 flex items-center justify-between px-unit-lg border-b border-outline-variant/10"><div class="flex items-center gap-3"><div class="flex items-center gap-2 text-on-surface-variant font-medium text-body-sm"><span class="hover:text-primary cursor-pointer">Investigaciones</span><span class="text-on-surface-variant/30">/</span><span class="text-on-surface font-headline-md">Análisis IA Generativa en Educación</span></div></div><div class="flex items-center gap-2"><button class="flex items-center gap-1.5 bg-primary text-white px-unit-lg py-1.5 rounded-lg text-body-sm font-headline-md hover:bg-primary-container transition-colors shadow-sm"><span class="material-symbols-outlined text-[16px]">play_arrow</span><span class="">Ejecutar</span></button><button class="flex items-center gap-1.5 bg-white text-on-surface px-3 py-1.5 rounded-lg text-body-sm font-headline-md hover:bg-surface-container transition-colors shadow-sm border border-outline-variant/20"><span class="material-symbols-outlined text-[16px]">tune</span><span class="">Simular</span></button><button class="flex items-center gap-1.5 bg-white text-on-surface px-3 py-1.5 rounded-lg text-body-sm font-headline-md hover:bg-surface-container transition-colors shadow-sm border border-outline-variant/20"><span class="material-symbols-outlined text-[16px]">save</span><span class="">Guardar</span></button><button class="w-9 h-9 rounded-lg bg-white text-on-surface-variant flex items-center justify-center hover:bg-surface-container transition-colors border border-outline-variant/20"><span class="material-symbols-outlined text-[18px]">more_vert</span></button><div class="relative flex items-center"><button class="w-9 h-9 rounded-lg bg-white text-on-surface-variant flex items-center justify-center hover:bg-surface-container transition-colors border border-outline-variant/20"><span class="material-symbols-outlined text-[18px]">notifications</span></button><span class="absolute top-1.5 right-1.5 w-2 h-2 rounded-full bg-error"></span></div><div class="h-5 w-[1px] bg-outline-variant/40"></div><div class="flex items-center gap-3 bg-white px-3 py-1.5 rounded-lg border border-outline-variant/20"><img alt="Profile" class="w-7 h-7 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida/AEtjO1WP6GPazsIKzYAU_cAXS_UMiMdEn-YRAQOh55dhEK_tMLLasef3zlbeR66jFD4-mWWPabjfPLs3VW5l1pKlW6uRGcGUUjzXi85cUuO-QTdTga6fVdaPcc5O8PBc_edHraEZnDILuukniqrUBJMCS0M6oM038K_tcimtz1bnSkfhQpBQt1YRyVp111vMd4520Mw3csb8VwgisoWZ5SuqXf3Qab0iGauw2f6a9VYZtoM7FW1GAOSHZmSQ2fG8"><div class="flex flex-col"><span class="text-body-sm font-headline-md text-on-surface leading-tight">Juan Pérez</span><span class="text-[10px] text-on-surface-variant">Investigador</span></div></div></div></header>
+<!-- Workspace Canvas & Docked Panels -->
+<main class="flex-1 relative overflow-hidden flex flex-col bg-slate-background">
+<!-- Integrated Project Header & Controls Bar -->
+<!-- Main Workspace Area -->
+<div class="flex-1 flex relative overflow-hidden">
+<!-- Infinite Canvas / Dot Grid -->
+<div class="flex-1 relative overflow-hidden flex items-center justify-center bg-slate-background" style="background-image: radial-gradient(#cbd5e1 1.5px, transparent 1.5px); background-size: 24px 24px;">
+<!-- Subtle Glow Elements -->
+<div class="absolute top-1/4 left-1/4 w-[400px] h-[400px] bg-primary/5 rounded-full blur-3xl pointer-events-none"></div>
+<div class="absolute bottom-1/4 right-1/4 w-[400px] h-[400px] bg-node-search/5 rounded-full blur-3xl pointer-events-none"></div>
+<!-- Connectors SVG -->
+<svg class="absolute inset-0 w-full h-full pointer-events-none z-0">
+<g class="text-outline-variant" fill="none" opacity="0.5" stroke="currentColor" stroke-dasharray="4 4" stroke-width="2">
+<path d="M 220 230 C 270 230, 270 230, 320 230"></path>
+<path d="M 520 230 C 570 230, 570 230, 620 230"></path>
+<path d="M 820 230 C 870 230, 870 380, 920 380"></path>
+<path d="M 1120 380 C 1170 380, 1170 380, 1220 380"></path>
+</g>
+</svg>
+<!-- Nodes Container -->
+<div class="relative w-[1600px] h-[800px] select-none z-10">
+<!-- Node 1 -->
+<div class="absolute top-[170px] left-[60px] w-[160px] bg-white rounded-xl shadow-sm hover:shadow-md transition-all border border-outline-variant/20">
+<div class="h-1 bg-node-input rounded-t-xl"></div>
+<div class="p-3">
+<div class="flex items-center justify-between mb-2">
+<span class="material-symbols-outlined text-node-input text-[18px]">input</span>
+<span class="text-[9px] bg-slate-background px-1.5 py-0.5 rounded text-on-surface-variant font-mono-code uppercase">Trigger</span>
+</div>
+<p class="font-headline-md text-body-md text-on-surface">Tema de Investigación</p>
+<p class="text-body-sm text-on-surface-variant/70 truncate mt-1">String / Input</p>
+</div>
+<div class="absolute right-[-6px] top-[50%] -translate-y-1/2 w-3 h-3 bg-white border-2 border-node-input rounded-full"></div>
+</div>
+<!-- Node 2 -->
+<div class="absolute top-[170px] left-[320px] w-[200px] bg-white rounded-xl shadow-sm hover:shadow-md transition-all border border-outline-variant/20">
+<div class="h-1 bg-node-prompt rounded-t-xl"></div>
+<div class="p-3">
+<div class="flex items-center justify-between mb-2">
+<span class="material-symbols-outlined text-node-prompt text-[18px]">terminal</span>
+<span class="text-[9px] bg-slate-background px-1.5 py-0.5 rounded text-on-surface-variant font-mono-code uppercase">LLM Prompt</span>
+</div>
+<p class="font-headline-md text-body-md text-on-surface">Generar Plan</p>
+<p class="text-body-sm text-on-surface-variant/70 truncate mt-1">GPT-4o • t: 0.7</p>
+</div>
+<div class="absolute left-[-6px] top-[50%] -translate-y-1/2 w-3 h-3 bg-white border-2 border-node-prompt rounded-full"></div>
+<div class="absolute right-[-6px] top-[50%] -translate-y-1/2 w-3 h-3 bg-white border-2 border-node-prompt rounded-full"></div>
+</div>
+<!-- Node 3 -->
+<div class="absolute top-[170px] left-[620px] w-[200px] bg-white rounded-xl shadow-sm hover:shadow-md transition-all border border-outline-variant/20">
+<div class="h-1 bg-node-search rounded-t-xl"></div>
+<div class="p-3">
+<div class="flex items-center justify-between mb-2">
+<span class="material-symbols-outlined text-node-search text-[18px]">public</span>
+<span class="text-[9px] bg-slate-background px-1.5 py-0.5 rounded text-on-surface-variant font-mono-code uppercase">API Tool</span>
+</div>
+<p class="font-headline-md text-body-md text-on-surface">Búsqueda Web</p>
+<p class="text-body-sm text-on-surface-variant/70 truncate mt-1">Exa.ai / Semantic</p>
+</div>
+<div class="absolute left-[-6px] top-[50%] -translate-y-1/2 w-3 h-3 bg-white border-2 border-node-search rounded-full"></div>
+<div class="absolute right-[-6px] top-[50%] -translate-y-1/2 w-3 h-3 bg-white border-2 border-node-search rounded-full"></div>
+</div>
+<!-- Node 4 (Selected) -->
+<div class="absolute top-[320px] left-[920px] w-[200px] bg-white rounded-xl shadow-md border-2 border-primary transition-all">
+<div class="h-1 bg-primary rounded-t-xl"></div>
+<div class="p-3">
+<div class="flex items-center justify-between mb-2">
+<span class="material-symbols-outlined text-primary text-[18px]">smart_toy</span>
+<span class="text-[9px] bg-primary/10 text-primary font-headline-md px-1.5 py-0.5 rounded uppercase">Activo</span>
+</div>
+<p class="font-headline-md text-body-md text-on-surface">Análisis IA</p>
+<p class="text-body-sm text-on-surface-variant/70 truncate mt-1">GPT-4o • t: 0.7</p>
+</div>
+<div class="absolute left-[-6px] top-[50%] -translate-y-1/2 w-3 h-3 bg-white border-2 border-primary rounded-full"></div>
+<div class="absolute right-[-6px] top-[50%] -translate-y-1/2 w-3 h-3 bg-white border-2 border-primary rounded-full"></div>
+</div>
+<!-- Node 5 -->
+<div class="absolute top-[320px] left-[1220px] w-[180px] bg-white rounded-xl shadow-sm hover:shadow-md transition-all border border-outline-variant/20">
+<div class="h-1 bg-node-logic rounded-t-xl"></div>
+<div class="p-3">
+<div class="flex items-center justify-between mb-2">
+<span class="material-symbols-outlined text-node-logic text-[18px]">alt_route</span>
+<span class="text-[9px] bg-slate-background px-1.5 py-0.5 rounded text-on-surface-variant font-mono-code uppercase">Logic</span>
+</div>
+<p class="font-headline-md text-body-md text-on-surface">Validar Calidad</p>
+<p class="text-body-sm text-on-surface-variant/70 truncate mt-1">Score &gt; 0.85</p>
+</div>
+<div class="absolute left-[-6px] top-[50%] -translate-y-1/2 w-3 h-3 bg-white border-2 border-node-logic rounded-full"></div>
+<div class="absolute right-[-6px] top-[50%] -translate-y-1/2 w-3 h-3 bg-white border-2 border-node-logic rounded-full"></div>
+</div>
+</div>
+<!-- Minimap Float -->
+<div class="absolute bottom-6 left-6 w-44 h-28 bg-white/90 backdrop-blur-md rounded-xl shadow-md border border-outline-variant/20 p-2 z-20 flex flex-col justify-between">
+<div class="flex items-center justify-between">
+<span class="text-[9px] font-label-caps text-on-surface-variant tracking-wider">MAPA GENERAL</span>
+<span class="text-[9px] text-primary font-headline-md">100%</span>
+</div>
+<div class="flex-1 relative my-1.5 bg-slate-background rounded border border-outline-variant/10 overflow-hidden">
+<div class="absolute top-3 left-2 w-3 h-2 bg-node-input rounded-[1px]"></div>
+<div class="absolute top-3 left-7 w-4 h-2 bg-node-prompt rounded-[1px]"></div>
+<div class="absolute top-3 left-13 w-4 h-2 bg-node-search rounded-[1px]"></div>
+<div class="absolute top-9 left-19 w-4 h-2 bg-primary rounded-[1px] ring-1 ring-white"></div>
+<div class="absolute top-9 left-25 w-3 h-2 bg-node-logic rounded-[1px]"></div>
+</div>
+<div class="flex justify-between text-[9px] text-on-surface-variant/70">
+<span class="">5 Nodos activos</span>
+<span class="">X: 240, Y: 120</span>
+</div>
+</div>
+<!-- Floating Financial Estimation Drawer Toggle / Card -->
+<div class="absolute bottom-6 right-6 w-80 bg-white/95 backdrop-blur-xl rounded-2xl shadow-xl border border-outline-variant/20 z-30 transition-all duration-300 overflow-hidden" id="financial-drawer">
+<div class="px-4 py-3 bg-surface-container-low border-b border-outline-variant/10 flex items-center justify-between cursor-pointer hover:bg-surface-container/50 transition-colors" onclick="toggleFinancialDrawer()">
+<div class="flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-node-input animate-pulse"></span>
+<span class="text-label-caps text-on-surface font-headline-md">Estimación Financiera</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="text-xs font-headline-md text-primary">$0.18 <span class="text-[10px] text-on-surface-variant font-normal">USD</span></span>
+<span class="material-symbols-outlined text-[18px] text-on-surface-variant transition-transform" id="drawer-icon">expand_less</span>
+</div>
+</div>
+<div class="p-4 space-y-3" id="drawer-content">
+<div class="grid grid-cols-2 gap-2">
+<div class="bg-slate-background p-2.5 rounded-lg border border-outline-variant/10">
+<p class="text-[10px] text-on-surface-variant">Tokens Entrada</p>
+<p class="font-headline-md text-body-md text-on-surface mt-0.5">2,450</p>
+</div>
+<div class="bg-slate-background p-2.5 rounded-lg border border-outline-variant/10">
+<p class="text-[10px] text-on-surface-variant">Tokens Salida</p>
+<p class="font-headline-md text-body-md text-on-surface mt-0.5">3,850</p>
+</div>
+</div>
+<div class="flex items-center justify-between pt-1">
+<div>
+<p class="text-[10px] text-on-surface-variant">Total Tokens</p>
+<p class="text-body-md font-headline-md text-primary">6,300 tokens</p>
+</div>
+<div class="text-right">
+<p class="text-[10px] text-on-surface-variant">Costo Estimado</p>
+<p class="text-body-md font-headline-md text-on-surface">$0.18 <span class="text-xs text-on-surface-variant font-normal">USD</span></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Right Inspector Panel (Node Properties) -->
+<div class="w-[360px] bg-white border-l border-outline-variant/10 flex flex-col z-20 shadow-[-4px_0_16px_rgba(0,0,0,0.01)]">
+<!-- Header -->
+<div class="px-unit-lg py-4 border-b border-outline-variant/10 flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[20px]">tune</span>
+<span class="font-headline-md text-headline-md text-on-surface">Propiedades del Nodo</span>
+</div>
+<button class="text-on-surface-variant hover:text-on-surface transition-colors">
+<span class="material-symbols-outlined text-[18px]">close</span>
+</button>
+</div>
+<!-- Body -->
+<div class="flex-1 overflow-y-auto p-unit-lg space-y-5">
+<div class="space-y-1.5">
+<label class="text-label-caps text-on-surface-variant">NOMBRE DEL NODO</label>
+<input class="w-full bg-slate-background border border-outline-variant/30 rounded-lg px-3 py-2 text-body-md text-on-surface focus:outline-none focus:border-primary transition-colors" type="text" value="Análisis IA">
+</div>
+<div class="space-y-1.5">
+<label class="text-label-caps text-on-surface-variant">MODELO DE IA</label>
+<div class="relative">
+<select class="w-full bg-slate-background border border-outline-variant/30 rounded-lg px-3 py-2 text-body-md text-on-surface focus:outline-none focus:border-primary transition-colors appearance-none">
+<option selected="">GPT-4o (OpenAI)</option>
+<option>Claude 3.5 Sonnet (Anthropic)</option>
+<option>Llama 3 70B (Meta)</option>
+</select>
+<span class="material-symbols-outlined absolute right-3 top-1/2 -translate-y-1/2 text-on-surface-variant pointer-events-none text-[18px]">expand_more</span>
+</div>
+</div>
+<div class="space-y-4 pt-1">
+<div class="space-y-1.5">
+<div class="flex justify-between items-center">
+<label class="text-label-caps text-on-surface-variant">TEMPERATURA</label>
+<span class="text-body-sm font-headline-md text-primary bg-primary/10 px-2 py-0.5 rounded">0.7</span>
+</div>
+<input class="w-full accent-primary cursor-pointer" max="1" min="0" step="0.1" type="range" value="0.7">
+</div>
+<div class="space-y-1.5">
+<div class="flex justify-between items-center">
+<label class="text-label-caps text-on-surface-variant">MAX TOKENS</label>
+<span class="text-body-sm font-headline-md text-on-surface bg-surface-container px-2 py-0.5 rounded">1500</span>
+</div>
+<input class="w-full accent-primary cursor-pointer" max="4096" min="256" step="128" type="range" value="1500">
+</div>
+<div class="space-y-1.5">
+<div class="flex justify-between items-center">
+<label class="text-label-caps text-on-surface-variant">TOP-P</label>
+<span class="text-body-sm font-headline-md text-on-surface bg-surface-container px-2 py-0.5 rounded">0.95</span>
+</div>
+<input class="w-full accent-primary cursor-pointer" max="1" min="0" step="0.05" type="range" value="0.95">
+</div>
+</div>
+<div class="space-y-1.5 pt-1">
+<div class="flex justify-between items-center">
+<label class="text-label-caps text-on-surface-variant">SYSTEM PROMPT</label>
+<span class="text-[10px] text-primary cursor-pointer hover:underline font-headline-md">Expandir editor</span>
+</div>
+<textarea class="w-full bg-slate-background border border-outline-variant/30 rounded-lg p-3 text-mono-code text-on-surface focus:outline-none focus:border-primary transition-colors resize-none" rows="3">Actúa como un investigador senior especializado en tendencias de tecnología educativa y pedagogía digital. Analiza los resultados de búsqueda web y extrae 3 insights clave.</textarea>
+</div>
+<div class="space-y-1.5 pt-1">
+<label class="text-label-caps text-on-surface-variant">VARIABLES DISPONIBLES</label>
+<div class="flex flex-wrap gap-1.5">
+<span class="bg-slate-background border border-outline-variant/20 text-on-surface-variant px-2 py-1 rounded text-body-sm font-mono-code"><span class="text-primary">{</span>tema_investigacion<span class="text-primary">}</span></span>
+<span class="bg-slate-background border border-outline-variant/20 text-on-surface-variant px-2 py-1 rounded text-body-sm font-mono-code"><span class="text-primary">{</span>resultados_web<span class="text-primary">}</span></span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+</div>
+<script>
+  let sidebarOpen = true;
+  function toggleSidebar() {
+    const sb = document.getElementById('app-sidebar');
+    sidebarOpen = !sidebarOpen;
+    if(!sidebarOpen) {
+      sb.style.transform = 'translateX(-100%)';
+    } else {
+      sb.style.transform = 'translateX(0)';
+    }
+  }
+
+  let drawerExpanded = true;
+  function toggleFinancialDrawer() {
+    const content = document.getElementById('drawer-content');
+    const icon = document.getElementById('drawer-icon');
+    drawerExpanded = !drawerExpanded;
+    if(!drawerExpanded) {
+      content.style.display = 'none';
+      icon.style.transform = 'rotate(180deg)';
+    } else {
+      content.style.display = 'block';
+      icon.style.transform = 'rotate(0deg)';
+    }
+  }
+</script>
+
+
+
+
+</body></html>

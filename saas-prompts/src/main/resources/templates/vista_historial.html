@@ -1,0 +1,265 @@
+<!DOCTYPE html><html lang="en" style=""><head><meta charset="utf-8"><meta content="width=device-width, initial-scale=1.0" name="viewport"><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={theme:{extend:{"colors":{"surface-tint":"#4d44e3","on-primary-fixed":"#0f0069","surface-dim":"#dcd8e5","node-prompt":"#4F46E5","tertiary-fixed":"#ffdbcc","inverse-primary":"#c3c0ff","on-tertiary-container":"#ffd2be","on-tertiary-fixed-variant":"#7b2f00","node-output":"#E11D48","on-secondary-fixed":"#131b2e","tertiary":"#7e3000","sidebar-navy":"#0F172A","on-tertiary-fixed":"#351000","surface-variant":"#e4e1ee","inverse-on-surface":"#f3effc","canvas-grid":"#E2E8F0","on-primary-fixed-variant":"#3323cc","surface-container":"#f0ecf9","node-logic":"#F59E0B","on-surface":"#1b1b24","inverse-surface":"#302f39","node-input":"#10B981","secondary-fixed-dim":"#bec6e0","node-search":"#A855F7","on-secondary-container":"#5c647a","primary-container":"#4f46e5","surface-container-high":"#eae6f4","primary-fixed-dim":"#c3c0ff","tertiary-fixed-dim":"#ffb695","secondary-fixed":"#dae2fd","surface-bright":"#fcf8ff","error-container":"#ffdad6","on-secondary":"#ffffff","background":"#fcf8ff","primary-fixed":"#e2dfff","surface-container-low":"#f5f2ff","outline-variant":"#c7c4d8","on-primary":"#ffffff","surface":"#fcf8ff","on-secondary-fixed-variant":"#3f465c","on-surface-variant":"#464555","slate-background":"#F8FAFC","on-error-container":"#93000a","secondary-container":"#dae2fd","on-tertiary":"#ffffff","surface-container-lowest":"#ffffff","primary":"#3525cd","on-error":"#ffffff","on-background":"#1b1b24","outline":"#777587","tertiary-container":"#a44100","surface-container-highest":"#e4e1ee","secondary":"#565e74","on-primary-container":"#dad7ff","error":"#ba1a1a"},"borderRadius":{"DEFAULT":"0.25rem","lg":"0.5rem","xl":"0.75rem","full":"9999px"},"spacing":{"unit-md":"16px","node-gap":"32px","unit-sm":"8px","container-margin":"24px","sidebar-width":"240px","inspector-width":"360px","gutter":"16px","unit-lg":"24px","unit-xs":"4px"},"fontFamily":{"label-caps":["Inter"],"headline-md":["Inter"],"mono-code":["monospace"],"headline-xl":["Inter"],"body-sm":["Inter"],"body-lg":["Inter"],"headline-lg":["Inter"],"body-md":["Inter"]},"fontSize":{"label-caps":["11px",{"lineHeight":"16px","letterSpacing":"0.05em","fontWeight":"600"}],"headline-md":["18px",{"lineHeight":"28px","fontWeight":"600"}],"mono-code":["13px",{"lineHeight":"18px","fontWeight":"400"}],"headline-xl":["36px",{"lineHeight":"44px","letterSpacing":"-0.02em","fontWeight":"700"}],"body-sm":["12px",{"lineHeight":"16px","fontWeight":"400"}],"body-lg":["16px",{"lineHeight":"24px","fontWeight":"400"}],"headline-lg":["24px",{"lineHeight":"32px","letterSpacing":"-0.01em","fontWeight":"600"}],"body-md":["14px",{"lineHeight":"20px","fontWeight":"400"}]}}}}</script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&amp;display=swap" rel="stylesheet"></head><body class="bg-slate-background font-body-md text-on-surface"><aside class="fixed left-0 top-0 h-full w-sidebar-width bg-sidebar-navy z-50 flex flex-col shadow-xl"><div class="p-unit-lg flex items-center gap-3 border-b border-white/5"><img alt="Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1XwSgcaB06WocgwVPR74TfCoTnG3J17_q6igMYCfxuYpErkpaCn0d2KlnxGxgssAVw8eVRkyt424bCcugV-glPq7KTWJFreonDKHN5xbKQWB5DDiFJorJqyPzFQ9T3Kq-yQLrqf8a4yZkrFmID0TYKEmaJ_jTTfu8nlEvS4-wfXl8u_dyYVQRyDO-d2xU6uSjUkQijJPo4RixMECjxVmeZRpYtzEd3b72pMN8cQUIqC0c3pici2vKyTySp1"><span class="text-white font-headline-md text-headline-md tracking-tight">PromptFlow</span></div><nav class="flex-1 py-unit-md px-unit-sm space-y-1 overflow-y-auto" data-active-classes="bg-primary text-white"><a class="flex items-center px-unit-md py-2.5 rounded-lg text-white/60 hover:text-white hover:bg-white/5 transition-all group" data-path="inicio" href="#"><span class="material-symbols-outlined mr-3 text-[20px]">home</span><span class="text-body-md font-body-md">Inicio</span></a><a class="flex items-center px-unit-md py-2.5 rounded-lg text-white/60 hover:text-white hover:bg-white/5 transition-all" data-path="investigaciones" href="#"><span class="material-symbols-outlined mr-3 text-[20px]">science</span><span class="text-body-md font-body-md">Investigaciones</span></a><a class="flex items-center px-unit-md py-2.5 rounded-lg text-white/60 hover:text-white hover:bg-white/5 transition-all" data-path="workflows" href="#"><span class="material-symbols-outlined mr-3 text-[20px]">account_tree</span><span class="text-body-md font-body-md">Workflows</span></a><a class="flex items-center px-unit-md py-2.5 rounded-lg text-white/60 hover:text-white hover:bg-white/5 transition-all" data-path="prompts" href="#"><span class="material-symbols-outlined mr-3 text-[20px]">terminal</span><span class="text-body-md font-body-md">Prompts</span></a><a class="flex items-center px-unit-md py-2.5 rounded-lg text-white/60 hover:text-white hover:bg-white/5 transition-all" data-path="plantillas" href="#"><span class="material-symbols-outlined mr-3 text-[20px]">dashboard_customize</span><span class="text-body-md font-body-md">Plantillas</span></a><a class="flex items-center px-unit-md py-2.5 rounded-lg text-white/60 hover:text-white hover:bg-white/5 transition-all" data-path="modelos-de-ia" href="#"><span class="material-symbols-outlined mr-3 text-[20px]">smart_toy</span><span class="text-body-md font-body-md">Modelos de IA</span></a><a class="flex items-center px-unit-md py-2.5 rounded-lg transition-all text-white/60 hover:bg-white/5 hover:text-white" data-path="ejecuciones" href="#"><span class="material-symbols-outlined mr-3 text-[20px]">play_circle</span><span class="text-body-md font-body-md">Ejecuciones</span></a><a class="flex items-center px-unit-md py-2.5 rounded-lg transition-all bg-primary text-white" data-path="historial-de-costos" href="#" aria-current="page"><span class="material-symbols-outlined mr-3 text-[20px]">payments</span><span class="text-body-md font-body-md">Historial de Costos</span></a><a class="flex items-center px-unit-md py-2.5 rounded-lg text-white/60 hover:text-white hover:bg-white/5 transition-all" data-path="documentos" href="#"><span class="material-symbols-outlined mr-3 text-[20px]">description</span><span class="text-body-md font-body-md">Documentos</span></a><a class="flex items-center px-unit-md py-2.5 rounded-lg text-white/60 hover:text-white hover:bg-white/5 transition-all" data-path="ajustes" href="#"><span class="material-symbols-outlined mr-3 text-[20px]">settings</span><span class="text-body-md font-body-md">Ajustes</span></a></nav><div class="px-unit-md pb-unit-lg space-y-4"><div class="bg-white/10 p-unit-md rounded-xl space-y-3"><div class="flex justify-between text-white/80 text-label-caps font-label-caps"><span class="">CUOTA ACTUAL</span><span class="">41%</span></div><div class="flex items-baseline justify-between text-white font-headline-md text-body-md"><span class="">$8.40</span><span class="text-white/40 font-body-sm">/ $20.00</span></div><div class="h-1.5 w-full bg-white/10 rounded-full overflow-hidden"><div class="h-full bg-node-input" style="width: 41%"></div></div><div class="flex items-center justify-between pt-1"><p class="text-white/40 text-[10px]">Renueva el 01/06/2025</p><button class="text-xs text-white/80 hover:text-white font-headline-md underline">Ver detalles</button></div></div><div class="flex items-center gap-3 pt-4 border-t border-white/10"><img alt="Profile" class="w-9 h-9 rounded-full object-cover border border-white/20" src="https://lh3.googleusercontent.com/aida/AEtjO1WP6GPazsIKzYAU_cAXS_UMiMdEn-YRAQOh55dhEK_tMLLasef3zlbeR66jFD4-mWWPabjfPLs3VW5l1pKlW6uRGcGUUjzXi85cUuO-QTdTga6fVdaPcc5O8PBc_edHraEZnDILuukniqrUBJMCS0M6oM038K_tcimtz1bnSkfhQpBQt1YRyVp111vMd4520Mw3csb8VwgisoWZ5SuqXf3Qab0iGauw2f6a9VYZtoM7FW1GAOSHZmSQ2fG8"><div class="flex-1 min-w-0"><p class="text-white text-body-sm font-headline-md truncate">Investigador Senior</p><p class="text-white/40 text-[10px] truncate">Lab Alpha-9</p></div><span class="material-symbols-outlined text-white/40 text-sm">unfold_more</span></div></div></aside><div class="pl-sidebar-width"><header class="fixed top-0 left-sidebar-width right-0 h-16 bg-white/80 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-40 flex items-center justify-end px-unit-lg gap-6"><div class="flex items-center gap-6"><span class="material-symbols-outlined text-on-surface-variant cursor-pointer hover:text-primary transition-colors">notifications</span><span class="material-symbols-outlined text-on-surface-variant cursor-pointer hover:text-primary transition-colors">help_outline</span><div class="h-6 w-[1px] bg-outline-variant"></div><img alt="Profile" class="w-8 h-8 rounded-full object-cover border border-slate-200" src="https://lh3.googleusercontent.com/aida/AEtjO1WP6GPazsIKzYAU_cAXS_UMiMdEn-YRAQOh55dhEK_tMLLasef3zlbeR66jFD4-mWWPabjfPLs3VW5l1pKlW6uRGcGUUjzXi85cUuO-QTdTga6fVdaPcc5O8PBc_edHraEZnDILuukniqrUBJMCS0M6oM038K_tcimtz1bnSkfhQpBQt1YRyVp111vMd4520Mw3csb8VwgisoWZ5SuqXf3Qab0iGauw2f6a9VYZtoM7FW1GAOSHZmSQ2fG8"></div></header><main class="relative pt-16 min-h-screen"><div class="flex flex-col w-full p-container-margin space-y-unit-lg">
+<!-- Encabezado principal -->
+<div class="flex flex-col md:flex-row md:items-center md:justify-between gap-4"><div class="flex flex-col md:flex-row md:items-center md:justify-between w-full gap-4"><div><h1 class="font-headline-xl text-headline-xl text-on-surface tracking-tight">Historial de Costos</h1><p class="font-body-md text-on-surface-variant mt-1">Control financiero y auditoría de consumo de APIs en tiempo real</p></div><div class="flex items-center gap-3"><div class="flex items-center gap-2 bg-white px-3 py-1.5 rounded-lg shadow-sm border border-slate-200"><span class="material-symbols-outlined text-outline text-[16px]">calendar_today</span><span class="font-body-sm text-on-surface">Octubre 2023 - Presente</span><span class="material-symbols-outlined text-outline text-[16px]">expand_more</span></div><button class="bg-primary text-white px-3 py-1.5 rounded-lg font-headline-md text-body-sm shadow-sm hover:bg-primary-container transition-colors flex items-center gap-1.5"><span class="material-symbols-outlined text-[16px]">download</span>Exportar</button></div></div></div>
+<!-- Tarjetas de métricas superiores -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<!-- Gasto Total -->
+<div class="bg-white p-6 rounded-xl shadow-sm border border-slate-200 flex flex-col justify-between relative overflow-hidden">
+<div class="flex items-center justify-between">
+<span class="font-label-caps text-label-caps text-on-surface-variant">GASTO TOTAL DEL MES</span>
+<div class="w-10 h-10 rounded-lg bg-slate-100 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined">payments</span>
+</div>
+</div>
+<div class="mt-4 flex items-baseline gap-2">
+<span class="font-headline-xl text-headline-xl text-on-surface">$24.80</span>
+<span class="font-body-sm text-on-surface-variant">USD</span>
+</div>
+<div class="mt-2 flex items-center gap-1.5 text-emerald-600 font-body-sm">
+<span class="material-symbols-outlined text-[16px]">trending_up</span>
+<span class="">+12% vs mes anterior</span>
+</div>
+</div>
+<!-- Costo Promedio -->
+<div class="bg-white p-6 rounded-xl shadow-sm border border-slate-200 flex flex-col justify-between relative overflow-hidden">
+<div class="flex items-center justify-between">
+<span class="font-label-caps text-label-caps text-on-surface-variant">COSTO PROMEDIO POR EJECUCIÓN</span>
+<div class="w-10 h-10 rounded-lg bg-slate-100 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined">analytics</span>
+</div>
+</div>
+<div class="mt-4 flex items-baseline gap-2">
+<span class="font-headline-xl text-headline-xl text-on-surface">$0.09</span>
+<span class="font-body-sm text-on-surface-variant">USD</span>
+</div>
+<div class="mt-2 flex items-center gap-1.5 text-on-surface-variant font-body-sm">
+<span class="material-symbols-outlined text-[16px]">remove</span>
+<span class="">Estable en últimas 50 ejecuciones</span>
+</div>
+</div>
+<!-- Ejecuciones Auditadas -->
+<div class="bg-white p-6 rounded-xl shadow-sm border border-slate-200 flex flex-col justify-between relative overflow-hidden">
+<div class="flex items-center justify-between">
+<span class="font-label-caps text-label-caps text-on-surface-variant">EJECUCIONES AUDITADAS</span>
+<div class="w-10 h-10 rounded-lg bg-slate-100 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined">verified</span>
+</div>
+</div>
+<div class="mt-4 flex items-baseline gap-2">
+<span class="font-headline-xl text-headline-xl text-on-surface">142</span>
+<span class="font-body-sm text-on-surface-variant">total</span>
+</div>
+<div class="mt-2 flex items-center gap-1.5 text-emerald-600 font-body-sm">
+<span class="material-symbols-outlined text-[16px]">check_circle</span>
+<span class="">98.6% tasa de éxito</span>
+</div>
+</div>
+</div>
+<!-- Sección de Tabla y Filtros -->
+<div class="bg-white rounded-xl shadow-sm border border-slate-200 overflow-hidden flex flex-col">
+<!-- Barra de filtros -->
+<div class="p-4 border-b border-slate-200 flex flex-col md:flex-row items-center justify-between gap-4 bg-slate-50/50">
+<div class="flex items-center gap-3 w-full md:w-auto">
+<div class="relative flex-1 md:w-80">
+<span class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none material-symbols-outlined text-outline text-[18px]">search</span>
+<input class="w-full pl-9 pr-4 py-2 bg-white border border-slate-200 rounded-lg text-body-md text-on-surface focus:outline-none focus:border-primary" placeholder="Buscar por ID o nombre de workflow..." type="text">
+</div>
+</div>
+<div class="flex items-center gap-3 w-full md:w-auto justify-end">
+<!-- Filtro por Modelo -->
+<div class="flex items-center gap-2 bg-white px-3 py-2 rounded-lg border border-slate-200 text-body-sm text-on-surface-variant">
+<span class="">Modelo:</span>
+<span class="font-headline-md text-on-surface">Todos</span>
+<span class="material-symbols-outlined text-[16px]">expand_more</span>
+</div>
+<!-- Filtro por Estado -->
+<div class="flex items-center gap-2 bg-white px-3 py-2 rounded-lg border border-slate-200 text-body-sm text-on-surface-variant">
+<span class="">Estado:</span>
+<span class="font-headline-md text-on-surface">Todos</span>
+<span class="material-symbols-outlined text-[16px]">expand_more</span>
+</div>
+</div>
+</div>
+<!-- Tabla detallada -->
+<div class="overflow-x-auto">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="border-b border-slate-200 text-on-surface-variant font-label-caps text-label-caps bg-slate-50/80">
+<th class="py-3 px-6">ID / WORKFLOW</th>
+<th class="py-3 px-6">ESTADO</th>
+<th class="py-3 px-6">TOKENS</th>
+<th class="py-3 px-6">COSTO</th>
+<th class="py-3 px-6">MODELO</th>
+<th class="py-3 px-6 text-right">ACCIONES</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-slate-100 font-body-md text-on-surface">
+<!-- Fila 1 -->
+<tr class="hover:bg-slate-50/50 transition-colors">
+<td class="py-4 px-6">
+<div class="flex flex-col">
+<span class="font-headline-md text-on-surface">#001</span>
+<span class="text-body-sm text-on-surface-variant">Investigación IA Educación</span>
+</div>
+</td>
+<td class="py-4 px-6">
+<span class="inline-flex items-center px-2.5 py-1 rounded-full text-[11px] font-headline-md bg-emerald-50 text-emerald-700">
+                Completada
+              </span>
+</td>
+<td class="py-4 px-6 font-mono-code text-on-surface-variant">5,570</td>
+<td class="py-4 px-6 font-headline-md text-on-surface">$0.08 USD</td>
+<td class="py-4 px-6">
+<span class="px-2 py-1 bg-slate-100 rounded text-body-sm font-mono-code text-on-surface-variant">GPT-4o</span>
+</td>
+<td class="py-4 px-6 text-right">
+<button class="text-outline hover:text-primary transition-colors p-1">
+<span class="material-symbols-outlined text-[18px]">visibility</span>
+</button>
+</td>
+</tr>
+<!-- Fila 2 -->
+<tr class="hover:bg-slate-50/50 transition-colors">
+<td class="py-4 px-6">
+<div class="flex flex-col">
+<span class="font-headline-md text-on-surface">#002</span>
+<span class="text-body-sm text-on-surface-variant">Investigación IA LATAM</span>
+</div>
+</td>
+<td class="py-4 px-6">
+<span class="inline-flex items-center px-2.5 py-1 rounded-full text-[11px] font-headline-md bg-emerald-50 text-emerald-700">
+                Completada
+              </span>
+</td>
+<td class="py-4 px-6 font-mono-code text-on-surface-variant">7,210</td>
+<td class="py-4 px-6 font-headline-md text-on-surface">$0.11 USD</td>
+<td class="py-4 px-6">
+<span class="px-2 py-1 bg-slate-100 rounded text-body-sm font-mono-code text-on-surface-variant">Claude 3.5</span>
+</td>
+<td class="py-4 px-6 text-right">
+<button class="text-outline hover:text-primary transition-colors p-1">
+<span class="material-symbols-outlined text-[18px]">visibility</span>
+</button>
+</td>
+</tr>
+<!-- Fila 3 -->
+<tr class="hover:bg-slate-50/50 transition-colors">
+<td class="py-4 px-6">
+<div class="flex flex-col">
+<span class="font-headline-md text-on-surface">#003</span>
+<span class="text-body-sm text-on-surface-variant">Análisis NLP Médico</span>
+</div>
+</td>
+<td class="py-4 px-6">
+<span class="inline-flex items-center px-2.5 py-1 rounded-full text-[11px] font-headline-md bg-amber-50 text-amber-700">
+                Error (Limit)
+              </span>
+</td>
+<td class="py-4 px-6 font-mono-code text-on-surface-variant">2,100</td>
+<td class="py-4 px-6 font-headline-md text-on-surface">$0.03 USD</td>
+<td class="py-4 px-6">
+<span class="px-2 py-1 bg-slate-100 rounded text-body-sm font-mono-code text-on-surface-variant">GPT-4o</span>
+</td>
+<td class="py-4 px-6 text-right">
+<button class="text-outline hover:text-primary transition-colors p-1">
+<span class="material-symbols-outlined text-[18px]">visibility</span>
+</button>
+</td>
+</tr>
+<!-- Fila 4 -->
+<tr class="hover:bg-slate-50/50 transition-colors">
+<td class="py-4 px-6">
+<div class="flex flex-col">
+<span class="font-headline-md text-on-surface">#004</span>
+<span class="text-body-sm text-on-surface-variant">Extracción de Patentes FinTech</span>
+</div>
+</td>
+<td class="py-4 px-6">
+<span class="inline-flex items-center px-2.5 py-1 rounded-full text-[11px] font-headline-md bg-emerald-50 text-emerald-700">
+                Completada
+              </span>
+</td>
+<td class="py-4 px-6 font-mono-code text-on-surface-variant">12,450</td>
+<td class="py-4 px-6 font-headline-md text-on-surface">$0.19 USD</td>
+<td class="py-4 px-6">
+<span class="px-2 py-1 bg-slate-100 rounded text-body-sm font-mono-code text-on-surface-variant">Claude 3.5</span>
+</td>
+<td class="py-4 px-6 text-right">
+<button class="text-outline hover:text-primary transition-colors p-1">
+<span class="material-symbols-outlined text-[18px]">visibility</span>
+</button>
+</td>
+</tr>
+<!-- Fila 5 -->
+<tr class="hover:bg-slate-50/50 transition-colors">
+<td class="py-4 px-6">
+<div class="flex flex-col">
+<span class="font-headline-md text-on-surface">#005</span>
+<span class="text-body-sm text-on-surface-variant">Generación Resumen Ejecutivo</span>
+</div>
+</td>
+<td class="py-4 px-6">
+<span class="inline-flex items-center px-2.5 py-1 rounded-full text-[11px] font-headline-md bg-emerald-50 text-emerald-700">
+                Completada
+              </span>
+</td>
+<td class="py-4 px-6 font-mono-code text-on-surface-variant">4,120</td>
+<td class="py-4 px-6 font-headline-md text-on-surface">$0.06 USD</td>
+<td class="py-4 px-6">
+<span class="px-2 py-1 bg-slate-100 rounded text-body-sm font-mono-code text-on-surface-variant">GPT-4o</span>
+</td>
+<td class="py-4 px-6 text-right">
+<button class="text-outline hover:text-primary transition-colors p-1">
+<span class="material-symbols-outlined text-[18px]">visibility</span>
+</button>
+</td>
+</tr>
+<!-- Fila 6 -->
+<tr class="hover:bg-slate-50/50 transition-colors">
+<td class="py-4 px-6">
+<div class="flex flex-col">
+<span class="font-headline-md text-on-surface">#006</span>
+<span class="text-body-sm text-on-surface-variant">Traducción Técnica Multilingüe</span>
+</div>
+</td>
+<td class="py-4 px-6">
+<span class="inline-flex items-center px-2.5 py-1 rounded-full text-[11px] font-headline-md bg-emerald-50 text-emerald-700">
+                Completada
+              </span>
+</td>
+<td class="py-4 px-6 font-mono-code text-on-surface-variant">9,830</td>
+<td class="py-4 px-6 font-headline-md text-on-surface">$0.14 USD</td>
+<td class="py-4 px-6">
+<span class="px-2 py-1 bg-slate-100 rounded text-body-sm font-mono-code text-on-surface-variant">GPT-4o-mini</span>
+</td>
+<td class="py-4 px-6 text-right">
+<button class="text-outline hover:text-primary transition-colors p-1">
+<span class="material-symbols-outlined text-[18px]">visibility</span>
+</button>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- Paginación limpia -->
+<div class="p-4 border-t border-slate-200 flex items-center justify-between bg-white">
+<span class="font-body-sm text-on-surface-variant">Mostrando 1-6 de 142 ejecuciones</span>
+<div class="flex items-center gap-1">
+<button class="px-3 py-1.5 rounded-lg border border-slate-200 text-body-sm text-on-surface-variant hover:bg-slate-50 disabled:opacity-50" disabled="">Anterior</button>
+<button class="px-3 py-1.5 rounded-lg bg-primary text-white text-body-sm font-headline-md">1</button>
+<button class="px-3 py-1.5 rounded-lg border border-slate-200 text-body-sm text-on-surface hover:bg-slate-50">2</button>
+<button class="px-3 py-1.5 rounded-lg border border-slate-200 text-body-sm text-on-surface hover:bg-slate-50">3</button>
+<span class="px-2 text-on-surface-variant">...</span>
+<button class="px-3 py-1.5 rounded-lg border border-slate-200 text-body-sm text-on-surface hover:bg-slate-50">24</button>
+<button class="px-3 py-1.5 rounded-lg border border-slate-200 text-body-sm text-on-surface hover:bg-slate-50">Siguiente</button>
+</div>
+</div>
+</div>
+</div></main></div>
+
+
+
+
+</body></html>
