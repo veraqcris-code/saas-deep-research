@@ -1,0 +1,198 @@
+<!DOCTYPE html><html lang="es"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<style>
+    @layer base {
+      html, body {
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        overscroll-behavior: none;
+      }
+    }
+    ::-webkit-scrollbar {
+      display: none;
+    }
+  </style>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            "surface-tint": "#4d44e3",
+            "on-primary-fixed": "#0f0069",
+            "surface-dim": "#dcd8e5",
+            "node-prompt": "#4F46E5",
+            "primary": "#3525cd",
+            "primary-container": "#4f46e5",
+            "on-primary": "#ffffff",
+            "slate-background": "#F8FAFC",
+            "surface-container-lowest": "#ffffff",
+            "surface-container-low": "#f5f2fc",
+            "surface-container": "#f0ecf9",
+            "surface-container-highest": "#e4e1ee",
+            "outline": "#777587",
+            "outline-variant": "#c7c4d8",
+            "on-surface": "#1b1b24",
+            "on-surface-variant": "#5a596a",
+            "brand-purple": "#2b16a3",
+            "pill-bg": "#ECE8FA",
+            "input-bg": "#F3F0FA",
+            "btn-secondary-bg": "#F5F2FC"
+          },
+          borderRadius: {
+            "DEFAULT": "0.25rem",
+            "lg": "0.5rem",
+            "xl": "0.75rem",
+            "2xl": "1rem",
+            "full": "9999px"
+          },
+          fontFamily: {
+            sans: ["Inter", "sans-serif"]
+          }
+        }
+      }
+    }
+  </script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet">
+</head>
+<body class="bg-[#F8F9FC] font-sans antialiased text-on-surface min-h-screen flex items-center justify-center p-4 sm:p-6 select-none">
+<!-- Subtle ambient decorative grid background -->
+<div class="fixed inset-0 pointer-events-none opacity-40 bg-[radial-gradient(#c7c4d8_1px,transparent_1px)] [background-size:24px_24px]"></div>
+<!-- Dedicated Centered Auth Card Container (Exact replication of Reference) -->
+<main class="relative z-10 w-full max-w-[420px] bg-white rounded-2xl shadow-[0_10px_35px_-8px_rgba(30,27,75,0.08),0_4px_12px_-4px_rgba(30,27,75,0.04)] border border-[#ECEAF4] px-7 py-9 sm:px-8 sm:py-10">
+<!-- Top Network Node Icon & Badge -->
+<div class="flex flex-col items-center text-center">
+<!-- Deep purple squircle with connected 5-node star network -->
+<div class="w-14 h-14 rounded-2xl bg-[#28159B] text-white flex items-center justify-center shadow-md shadow-[#28159B]/20">
+<svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24">
+<!-- Hub node center -->
+<circle cx="12" cy="12" r="2.3"></circle>
+<!-- 5 orbiting connected nodes -->
+<circle cx="12" cy="4" r="1.8"></circle>
+<circle cx="19.5" cy="9.5" r="1.8"></circle>
+<circle cx="16.5" cy="19" r="1.8"></circle>
+<circle cx="7.5" cy="19" r="1.8"></circle>
+<circle cx="4.5" cy="9.5" r="1.8"></circle>
+<!-- Connecting spokes -->
+<path d="M12 6.3V9.7M17.8 10.3l-3.8 1.1M15.4 17.3l-2.4-3.5M8.6 17.3l2.4-3.5M6.2 10.3l3.8 1.1" stroke="currentColor" stroke-linecap="round" stroke-width="1.6"></path>
+</svg>
+</div>
+<!-- Badge Pill -->
+<div class="mt-4 px-3 py-1 rounded-full bg-[#EAE5FC] text-[#3b22b8] text-[10.5px] font-bold tracking-[0.08em] uppercase">
+        PROMPTFLOW RESEARCH
+      </div>
+<!-- Title & Subtitle -->
+<h1 class="mt-4 text-[26px] font-bold tracking-tight text-[#161427]">
+        Iniciar sesión
+      </h1>
+<p class="mt-1 text-[13.5px] leading-snug text-[#626079] max-w-[260px]">
+        Bienvenido de vuelta a tu espacio de investigación de IA
+      </p>
+</div>
+<!-- Login Form -->
+<form class="mt-7 space-y-4" onsubmit="event.preventDefault();">
+<!-- Email Institutional Field -->
+<div class="space-y-1.5">
+<label class="block text-[11px] font-bold text-[#2A283B] tracking-[0.04em] uppercase" for="email">
+          CORREO ELECTRÓNICO&nbsp;</label>
+<div class="relative flex items-center">
+<span class="material-symbols-outlined absolute left-3.5 text-[#797693] text-[20px] pointer-events-none">
+            mail
+          </span>
+<input class="w-full bg-[#F3F0FA] border border-[#E4DFFA] rounded-xl pl-10 pr-3.5 py-2.5 text-[14px] text-[#1E1B39] placeholder:text-[#8D8BA6] focus:outline-none focus:ring-2 focus:ring-[#3724cf]/30 focus:border-[#3724cf] transition-all" id="email" placeholder="investigador@laboratorio.org" required="" type="email">
+</div>
+</div>
+<!-- Password Field with Forgot Link -->
+<div class="space-y-1.5 pt-1">
+<div class="flex items-center justify-between">
+<label class="block text-[11px] font-bold text-[#2A283B] tracking-[0.04em] uppercase" for="password">
+            CONTRASEÑA
+          </label>
+<a class="text-[12px] font-medium text-[#3525cd] hover:text-[#28159B] transition-colors" href="#">
+            ¿Olvidaste tu contraseña?
+          </a>
+</div>
+<div class="relative flex items-center">
+<span class="material-symbols-outlined absolute left-3.5 text-[#797693] text-[19px] pointer-events-none">
+            lock
+          </span>
+<input class="w-full bg-[#F3F0FA] border border-[#E4DFFA] rounded-xl pl-10 pr-10 py-2.5 text-[14px] text-[#1E1B39] placeholder:text-[#8D8BA6] focus:outline-none focus:ring-2 focus:ring-[#3724cf]/30 focus:border-[#3724cf] transition-all tracking-wider" id="password" placeholder="••••••••••••" required="" type="password">
+<button aria-label="Alternar visibilidad" class="absolute right-3 text-[#797693] hover:text-[#1E1B39] transition-colors p-1 flex items-center justify-center" id="togglePasswordBtn" type="button">
+<span class="material-symbols-outlined text-[19px]" id="passwordIcon">
+              visibility
+            </span>
+</button>
+</div>
+</div>
+<!-- Remember device checkbox -->
+<div class="pt-0.5 pb-1">
+<label class="flex items-center gap-2.5 cursor-pointer select-none">
+<input class="peer sr-only" id="remember" type="checkbox">
+<div class="w-4 h-4 rounded bg-[#E4E0F4] peer-checked:bg-[#3525cd] flex items-center justify-center transition-all">
+<span class="material-symbols-outlined text-[13px] text-white scale-0 peer-checked:scale-100 transition-transform font-bold">check</span>
+</div>
+<span class="text-[13px] text-[#555269]">Recordar este dispositivo por 30 días</span>
+</label>
+</div>
+<!-- Submit CTA Button -->
+<div class="pt-1">
+<button class="w-full py-3 px-5 rounded-xl bg-[#301ecf] hover:bg-[#2816b8] active:scale-[0.99] text-white font-semibold text-[15px] shadow-[0_4px_14px_rgba(48,30,207,0.35)] flex items-center justify-center gap-2 transition-all cursor-pointer" type="submit">
+<span class="">Entrar al Workspace</span>
+<span class="material-symbols-outlined text-[19px]">arrow_forward</span>
+</button>
+</div>
+<!-- Divider -->
+<div class="relative flex items-center justify-center py-2">
+<div class="w-full border-t border-[#EAE7F2]"></div>
+<span class="absolute bg-white px-3 text-[11px] font-semibold text-[#8C88A2] tracking-[0.06em] uppercase">
+          O CONTINÚA CON
+        </span>
+</div>
+<!-- SSO Buttons (Twin horizontal) -->
+<div class="grid grid-cols-2 gap-3 pt-0.5">
+<button class="flex items-center justify-center gap-2.5 py-2.5 px-3 rounded-xl bg-[#F5F2FC] hover:bg-[#ECE8F9] border border-[#E9E4F5] text-[#222038] transition-colors shadow-none cursor-pointer" type="button">
+<svg class="w-4 h-4 shrink-0" viewBox="0 0 24 24">
+<path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"></path>
+<path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"></path>
+<path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.06H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.94l2.85-2.22.81-.63z" fill="#FBBC05"></path>
+<path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.06l3.66 2.84c.87-2.6 3.3-4.52 6.16-4.52z" fill="#EA4335"></path>
+</svg>
+<span class="text-[13px] font-medium text-[#222038]">Google</span>
+</button>
+<button class="flex items-center justify-center gap-2 py-2.5 px-3 rounded-xl bg-[#F5F2FC] hover:bg-[#ECE8F9] border border-[#E9E4F5] text-[#222038] transition-colors shadow-none cursor-pointer" type="button">
+<span class="material-symbols-outlined text-[19px] text-[#44405E]">badge</span>
+<span class="text-[13px] font-medium text-[#222038]">SAML SSO</span>
+</button>
+</div>
+<!-- Access Request Footer -->
+<div class="pt-4 text-center">
+<p class="text-[12.5px] text-[#636077]">
+          ¿No tienes acceso habilitado? 
+          <a class="text-[#3525cd] font-semibold hover:text-[#231599] transition-colors" href="#">
+            Solicitar acceso de investigador
+          </a>
+</p>
+</div>
+</form>
+</main>
+<!-- Interactive script for password toggle -->
+<script>
+    const toggleBtn = document.getElementById('togglePasswordBtn');
+    const passwordInput = document.getElementById('password');
+    const passwordIcon = document.getElementById('passwordIcon');
+
+    if (toggleBtn && passwordInput && passwordIcon) {
+      toggleBtn.addEventListener('click', () => {
+        const isPassword = passwordInput.getAttribute('type') === 'password';
+        passwordInput.setAttribute('type', isPassword ? 'text' : 'password');
+        passwordIcon.textContent = isPassword ? 'visibility_off' : 'visibility';
+      });
+    }
+  </script>
+
+
+</body></html>
